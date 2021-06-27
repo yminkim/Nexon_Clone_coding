@@ -3,11 +3,89 @@
     <head>
         <meta charset="utf-8">
         <title>넥스트온</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+        
         <style>
+            @font-face {
+                font-family: "nexon-nanum";
+                src: url("./NEXONLv1GothicLight.ttf");
+            }
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            /* header */
             
+            .header-area, .header-game-menu, .right-menu, .pc-bang {
+                display: flex;
+                margin: auto 0;
+                font-size: 17px;
+            }
+
+            .header-area {
+                justify-content: space-between;
+                background-color: red;
+                height: 62px;
+                font-family: "nexon-nanum";
+            }
+
+            .pc-onoff {
+                background-color: gray;
+                color: #fff;
+                height: 15px;
+                border-radius: 20px;
+                font-size: 10px;
+            }
+
+           
+
+            .sign-in {
+                font-size: 18px;
+                font-weight: 800;
+                border-radius: 20px;
+                border: 2px solid black;
+                padding: 4px 12px;
+                color: black;
+            }
+
+            .right-menu a {
+                text-decoration: none;
+                color: rgb(71, 71, 71);
+            }
+            
+
+
+
         </style>
     </head>
     <body>
-        
+        <header class="header-area">
+            <div class="header-game-menu">
+                <div class="fas fa-bars"></div>
+                <div class="">메뉴</div>
+            </div>
+            <div class="web-title">
+                <a href="">
+                    <img src="img/logo_nexon.png" alt="">
+                </a>
+            </div>
+            <div class="right-menu">
+                <div class="pc-bang">
+                    <div class="pc-text">PC방</div>
+                    <div class="pc-onoff">OFF</div>
+                </div>
+                
+                <a href="">
+                    <div class="sign-up">회원가입</div>
+                </a>
+
+                <a href="">
+                    <div class="sign-in">로그인</div>
+                </a>
+            </div>
+        </header>
+
+
     </body>
 </html>
