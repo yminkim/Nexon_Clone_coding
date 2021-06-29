@@ -13,7 +13,9 @@
             * {
                 margin: 0;
                 padding: 0;
+                box-sizing: border-box;
             }
+
 
             /* header */
             
@@ -25,7 +27,6 @@
 
             .header-area {
                 justify-content: space-between;
-                background-color: red;
                 height: 62px;
                 font-family: "nexon-nanum";
             }
@@ -35,27 +36,157 @@
                 color: #fff;
                 height: 15px;
                 border-radius: 20px;
-                font-size: 10px;
+                font-size: 5px;
+                margin: 0 4px;
+                margin: 0 4px 10px 4px;
+                padding: 2px 5px;
+                line-height: 15px;
             }
 
-           
-
             .sign-in {
-                font-size: 18px;
-                font-weight: 800;
+                font-size: 16px;
+                font-weight: bold;
                 border-radius: 20px;
                 border: 2px solid black;
-                padding: 4px 12px;
+                padding: 9px 17px;
                 color: black;
+                
+            }
+
+            .sign-in, .signup, .header-game-menu {
+                transition: all 0.2s;
+            }
+
+            .right-menu {
+                align-items: center;
             }
 
             .right-menu a {
                 text-decoration: none;
-                color: rgb(71, 71, 71);
+                color: rgb(43, 43, 43);
+                font-weight: 400;
             }
             
+            .header-game-menu {
+                padding-left: 25px;
+                width: 256px;
+            }
 
+            .menu-text {
+                margin-left: 10px;
+            }
 
+            .sign-in {
+                margin-right: 35px;
+                margin-left: 20px;
+            }
+
+            .header-game-menu:hover, .sign-up:hover {
+                color: rgb(32, 139, 226);
+            }
+
+            .sign-in:hover {
+                color: #fff;
+                background: rgb(32, 139, 226);
+                border: 2px solid rgb(32, 139, 226);
+            }
+
+            /* 배너 */
+            .banner-bottom-area {
+                position: absolute;
+                bottom: 0px;
+                left: 240px;
+                display: flex;
+                justify-content: space-between;
+                height: 80px;
+            }
+
+            .background-img {
+                /* background-image: linear-gradient(to top, black, #d5d5d5); */
+                height: 550px;
+                background: linear-gradient(
+                    to bottom,
+                    
+                    rgba(20, 20, 20, 0) 75%,
+                    rgba(20, 20, 20, 1) 100%
+                ), url("img/카야호.jpg");
+            }
+
+            .background-img img{
+                width: 100%;
+                height: 100%;
+
+            }
+
+            .banner-area {
+                position: relative;
+                height: 550px;
+                
+                
+            }
+
+            .banner-menu {
+                width: 1280px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .banner-menu a {
+                display: flex;
+                text-decoration: none;
+            }
+
+            .banners {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 255px;
+                padding: 15px;
+                margin-right: 1px;
+                background-color: rgba( 255, 255, 255, 0.1);
+
+            }
+
+            .banner-arrow {
+                font-size: 25px;
+                align-items: center;
+                display: flex;
+                cursor: pointer;
+                margin: 0 25px;
+                opacity: 0;
+                color: #fff;
+            }
+
+            .banners:hover {
+                background-color: rgba(255, 255, 255, 0.3);
+                transition: all 0.5s;
+            }
+
+            .banner-arrow:hover {
+                color: #fff;
+                opacity: 1;
+            }
+
+            .space50 {
+                width: 200px;
+            }
+
+            .game-name, .banner-title {
+                font-weight: bold;
+                color: rgb(219, 219, 219);
+               
+            }
+
+            .game-name {
+                font-size: 14px;
+            }
+
+            .banner-title {
+                font-size: 18px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
 
         </style>
     </head>
@@ -63,7 +194,7 @@
         <header class="header-area">
             <div class="header-game-menu">
                 <div class="fas fa-bars"></div>
-                <div class="">메뉴</div>
+                <div class="menu-text">메뉴</div>
             </div>
             <div class="web-title">
                 <a href="">
@@ -71,10 +202,10 @@
                 </a>
             </div>
             <div class="right-menu">
-                <div class="pc-bang">
+                
                     <div class="pc-text">PC방</div>
                     <div class="pc-onoff">OFF</div>
-                </div>
+                
                 
                 <a href="">
                     <div class="sign-up">회원가입</div>
@@ -86,6 +217,67 @@
             </div>
         </header>
 
+        <div class="banner-area">
+            <a href="">
+                <div class="background-img">
+                   
+                </div>
+            </a>
+            <div class="banner-bottom-area">
+                
+                <div class="banner-arrow fas fa-chevron-left" onclick=""></div>
+                <div class="banner-menu">
+                    <a href="">
+                        <div class="banners banner-1">
+                            <div class="game-name">영웅의군단</div>
+                            <div class="banner-title">10주년 쇼타임 이벤트</div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="banners banner-2">
+                            <div class="game-name">디스아너드3</div>
+                            <div class="banner-title">CBT로 먼저 만나보는 베데스다의 신작!</div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="banners banner-3">
+                            <div class="game-name">엘소드</div>
+                            <div class="banner-title">넥슨캐시 지급</div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="banners banner-4">
+                            <div class="game-name">어둠의전설</div>
+                            <div class="banner-title">어둠의전설 어둠추억</div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="banners banner-5">
+                            <div class="game-name">카운터사이드</div>
+                            <div class="banner-title">카운터사이드x길티기어</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="banner-arrow fas fa-chevron-right"></div>
+                
+            </div>
+        </div>
 
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+        <script>
+            $('.banners').hover(function(){
+                // console.log($(this).children('div'));
+                $(this).children('div').css('color', 'white');
+            }, function() {
+                $(this).children('div').css('color', 'rgb(219, 219, 219)');
+            });
+
+            $('.banners').click(function(){
+                $(this).children('div').css('color', 'rgb(219, 219, 219)');
+            });
+        </script>
     </body>
 </html>
