@@ -82,7 +82,7 @@
                 margin-left: 20px;
             }
 
-            .header-game-menu:hover, .sign-up:hover, .rhror:hover, .qhdks:hover {
+            .header-game-menu:hover, .sign-up:hover, .rhror:hover, .qhdks:hover, .searchicon:hover {
                 color: rgb(32, 139, 226);
                 transition: all .3s;
             }
@@ -229,6 +229,7 @@
                 font-size: 23px;
                 font-weight: 700;
                 font-family: 'nexon-nanum';
+                line-height: 35px;
             }
             
             .recom-login-area {
@@ -272,16 +273,67 @@
                 overflow: hidden;
             }
 
-            .recom-post-img-area img {
-                width: 100%;
-                height: 100%;
+            #recom-img-1 {
                 background: linear-gradient(
-                    to bottom,
-                    
-                    rgba(20, 20, 20, 0) 75%,
-                    rgba(20, 20, 20, 1) 100%
+                    to top,
+                    rgba(20, 20, 20, 0) 10%,
+                    rgba(20, 20, 20, 0) 25%,
+                    rgba(20, 20, 20, 0.1) 50%,
+                    rgba(20, 20, 20, 0.3) 75%,
+                    rgba(20, 20, 20, 0.7) 100%
                 ), url("img/loh.jpg");
+                background-size: cover;
             }
+
+            #recom-img-2 {
+                background: linear-gradient(
+                    to top,
+                    rgba(20, 20, 20, 0) 10%,
+                    rgba(20, 20, 20, 0) 25%,
+                    rgba(20, 20, 20, 0.1) 50%,
+                    rgba(20, 20, 20, 0.3) 75%,
+                    rgba(20, 20, 20, 0.7) 100%
+                ), url("img/ittakes.jpg");
+                background-size: cover;
+            }
+
+            #recom-img-3 {
+                background: linear-gradient(
+                    to top,
+                    rgba(20, 20, 20, 0) 10%,
+                    rgba(20, 20, 20, 0) 25%,
+                    rgba(20, 20, 20, 0.1) 50%,
+                    rgba(20, 20, 20, 0.3) 75%,
+                    rgba(20, 20, 20, 0.7) 100%
+                ), url("img/seaof.jpg");
+                background-size: cover;
+            }
+
+            #recom-img-4 {
+                background: linear-gradient(
+                    to top,
+                    rgba(20, 20, 20, 0) 10%,
+                    rgba(20, 20, 20, 0) 25%,
+                    rgba(20, 20, 20, 0.1) 50%,
+                    rgba(20, 20, 20, 0.3) 75%,
+                    rgba(20, 20, 20, 0.7) 100%
+                ), url("img/apex.jpg");
+                background-size: cover;
+            }
+
+            #recom-img-5 {
+                background: linear-gradient(
+                    to top,
+                    rgba(20, 20, 20, 0) 10%,
+                    rgba(20, 20, 20, 0) 25%,
+                    rgba(20, 20, 20, 0.1) 50%,
+                    rgba(20, 20, 20, 0.3) 75%,
+                    rgba(20, 20, 20, 0.7) 100%
+                ), url("img/dishored.jpg");
+                background-size: cover;
+            }
+
+            
 
             .recom-game-area a {
                 text-decoration: none;
@@ -438,7 +490,119 @@
             }
             
             
+            /* 전체게임 */
+            .game-search-input {
+                padding-left: 5px;
+                width: 250px;
+                height: 35px;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: 1px solid rgb(201, 201, 201);
+                background-color: rgb(245, 245, 245);
+            }
 
+            .game-search-input::placeholder {
+                font-size: 11px;
+                color: rgb(163, 163, 163);
+            }
+            
+            .game-search-area {
+                flex: none;
+                margin-left: auto;
+                position: relative;
+            }
+
+            .searchicon {
+                position: absolute;
+                line-height: 35px;
+                right: 10px;
+                cursor: pointer;
+            }
+
+            .game-search-input:hover {
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: 1px solid rgb(168, 168, 168);
+                transition: all 0.3s;
+            }
+
+            .all-game-icon-box {
+                margin-left: 20px;
+                display: flex;
+                flex: none;
+                align-items: center;
+            }
+            
+            .all-game-icon {
+                font-size: 12px;
+                width: 28px;
+                height: 28px;
+                background-color: rgb(245, 245, 245);
+                color: gray;
+                text-align: center;
+                line-height: 28px;
+                border: 1px solid gray;
+                
+            }
+
+            .tag-area {
+                display: flex;
+                margin-top: 30px;
+                margin-bottom: 60px;
+                height: 60px;
+                background-color: #fff;
+                padding: 20px 30px;
+            }
+            
+            .tag-one {
+                font-size: 11px;
+                color: gray;
+                margin-right: 30px;
+                line-height: 20px;
+                
+            }
+
+            .tag-one:hover {
+                color: rgb(3, 145, 240);
+                transition: all .5s;
+            }
+
+            .test-tag {
+                padding: 0 10px;
+                border-radius: 10px;
+                background-color: black;
+                color: #fff;
+            }
+
+            .ggame-area {
+                display: flex;
+            }
+
+            .ggame {
+                margin-right: 30px;
+                font-size: 17px;
+                font-family: "nexon-nanum";
+                font-weight: bold;
+            }
+
+            .gmae-mobile-text {
+                color: gray;
+            }
+
+            .gmae-mobile-text:hover {
+                color: #07f;
+                transition: .5s;
+            }
+            
+            .fa-th-large {
+                border-color: black;
+                background-color: black;
+                color: #fff;
+            }
+
+            
 
         </style>
     </head>
@@ -529,8 +693,7 @@
                     
                     <a href="">
                         <div class="recom-post-area">
-                            <div class="recom-post-img-area">
-                                <img src="img/loh.jpg" alt="" class="recom-img">
+                            <div id="recom-img-1" class="recom-post-img-area">
                                 <div class="fab fa-facebook-messenger"></div>
                             </div>
                             <div class="recom-post-info-area">
@@ -544,8 +707,7 @@
 
                     <a href="">
                         <div class="recom-post-area">
-                            <div class="recom-post-img-area">
-                                <img src="img/ittakes.jpg" alt="" class="recom-img">
+                            <div id="recom-img-2" class="recom-post-img-area">
                                 <div class="fab fa-facebook-messenger"></div>
                             </div>
                             <div class="recom-post-info-area">
@@ -559,8 +721,7 @@
 
                     <a href="">
                         <div class="recom-post-area">
-                            <div class="recom-post-img-area">
-                                <img src="img/seaof.jpg" alt="" class="recom-img">
+                            <div id="recom-img-3" class="recom-post-img-area">
                                 <div class="fab fa-facebook-messenger"></div>
                             </div>
                             <div class="recom-post-info-area">
@@ -574,8 +735,7 @@
 
                     <a href="">
                         <div class="recom-post-area">
-                            <div class="recom-post-img-area">
-                                <img src="img/apex.jpg" alt="" class="recom-img">
+                            <div id="recom-img-4" class="recom-post-img-area">
                                 <div class="fab fa-facebook-messenger"></div>
                             </div>
                             <div class="recom-post-info-area">
@@ -589,8 +749,7 @@
 
                     <a href="">
                         <div class="recom-post-area">
-                            <div class="recom-post-img-area">
-                                <img src="img/dishored.jpg" alt="" class="recom-img">
+                            <div id="recom-img-5" class="recom-post-img-area">
                                 <div class="fab fa-facebook-messenger"></div>
                             </div>
                             <div class="recom-post-info-area">
@@ -648,6 +807,46 @@
                 </div>
             </div>
             
+
+
+
+
+            <div class="recom-game-top">
+                <div class="recom-text">전체게임</div>
+                <div class="all-game-icon-box">
+                    <div class="all-game-icon fas fa-th-large"></div>
+                    <div class="all-game-icon fas fa-bars"></div>
+                </div>
+                <div class="game-search-area">
+                    <input type="text" class="game-search-input" placeholder="게임명 검색" >
+                    <div class="searchicon fas fa-search"></div>
+                </div>
+            </div>
+
+
+
+            <div class="tag-area">
+                <div class="tag-one test-tag">#전체</div>
+                <div class="tag-one">#최근 게이머가 많은 TOP10</div>
+                <div class="tag-one">#오래 플레이하는 TOP10</div>
+                <div class="tag-one">#RPG</div>
+                <div class="tag-one">#액션 RPG</div>
+                <div class="tag-one">#AOS/MOBA</div>
+                <div class="tag-one">#FPS</div>
+                <div class="tag-one">#캐주얼</div>
+                <div class="tag-one">#스포츠</div>
+                <div class="tag-one">#이벤트</div>
+                <div class="tag-one">#업데이트</div>
+                <div class="tag-one">#신규게임</div>
+            </div>
+            
+            <div class="ggame-area">
+                <div class="ggame game-pc-text">PC게임</div>
+                <div class="ggame gmae-mobile-text">모바일게임</div>
+            </div>
+
+
+
         </main>
 
 
