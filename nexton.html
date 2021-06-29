@@ -29,6 +29,7 @@
                 justify-content: space-between;
                 height: 62px;
                 font-family: "nexon-nanum";
+                background-color: #fff !important;
             }
 
             .pc-onoff {
@@ -81,8 +82,9 @@
                 margin-left: 20px;
             }
 
-            .header-game-menu:hover, .sign-up:hover {
+            .header-game-menu:hover, .sign-up:hover, .rhror:hover, .qhdks:hover {
                 color: rgb(32, 139, 226);
+                transition: all .3s;
             }
 
             .sign-in:hover {
@@ -95,7 +97,7 @@
             .banner-bottom-area {
                 position: absolute;
                 bottom: 0px;
-                left: 240px;
+                left: 246px;
                 display: flex;
                 justify-content: space-between;
                 height: 80px;
@@ -188,6 +190,256 @@
                 overflow: hidden;
             }
 
+            /*메인*/
+            .h100 {
+                height: 80px;
+            }
+
+            body {
+                background-color: rgb(245, 245, 245);
+            }
+
+            .main-area {
+                width: 1280px;
+                margin: 0 auto;
+            }
+
+            .recom-game-top, .etc-link {
+                display: flex;
+            }
+
+            .recom-game-top {
+                margin: 10px 0;
+            }
+
+            .etc-link {
+                flex: none;
+                margin-left: auto;
+                align-items: center;
+            }
+
+            .etc-link a {
+                font-size: 14px;
+                text-decoration: none;
+                color: black;
+                margin-left: 30px;
+            }
+
+            .recom-text {
+                font-size: 23px;
+                font-weight: 700;
+                font-family: 'nexon-nanum';
+            }
+            
+            .recom-login-area {
+                display: flex;
+                height: 320px;
+                margin: 40px 0 100px 0;
+            }
+
+            
+
+            .recom-game-area {
+                flex-basis: 810px;
+                display: flex;
+                justify-content: space-between;
+                margin-right: 20px;
+            }
+
+            .login-area {
+                flex-basis: 470px;
+                background-color: #fff;
+            }
+
+            .recom-post-area {
+                display: flex;
+                width: 153px;
+                height: 320px;
+                background-color: #fff;
+                flex-direction: column;
+                
+            }
+
+            .recom-post-area:hover {
+                box-shadow: 0px 0px 9px 0px gray;
+                transition: all 0.2s;
+            }
+            
+            .recom-post-img-area {
+                position: relative;
+                width: 153px;
+                height: 192px;
+                overflow: hidden;
+            }
+
+            .recom-post-img-area img {
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(
+                    to bottom,
+                    
+                    rgba(20, 20, 20, 0) 75%,
+                    rgba(20, 20, 20, 1) 100%
+                ), url("img/loh.jpg");
+            }
+
+            .recom-game-area a {
+                text-decoration: none;
+                color: black;
+            }
+            
+            .recom-post-info-area {
+                display: flex;
+                flex-direction: column;
+                padding: 15px 10px;
+                height: 128px;
+            }
+
+            .recom-icon {
+                width: 30px;
+                text-align: center;
+                font-size: 10px;
+                background-color: rgb(64, 222, 228);
+                color: #fff;
+                border-radius: 10px;
+                border: 1px solid rgb(64, 222, 228);
+                font-weight: bold;
+                margin-bottom: 6px;
+            }
+
+            .recom-game-name {
+                font-family: "nexon-nanum";
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+            .why-recom-game {
+                font-size: 12px;
+                color: gray;
+                flex: none;
+                margin-top: auto;
+
+            }
+
+            .fa-facebook-messenger {
+                font-size: 30px;
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                color: #fff;
+            }
+
+            .fa-facebook-messenger:hover {
+                color: red;
+                background-color: rgb(245, 245, 245);
+            }
+
+
+            .login-area {
+                display: flex;
+                flex-direction: column;
+                padding: 60px 50px; 
+            }
+
+            .login-area a {
+                text-decoration: none;
+
+            }
+
+            .nexon-login {
+                width: 364px;
+                height: 55px;
+                background-color: rgb(39, 36, 36);
+                color: #fff;
+                text-align: center;
+                line-height: 55px;
+                margin-bottom: 7px;
+                font-size: 14px;
+                font-weight: bold;
+            }
+            
+            .another-login {
+                display: flex;
+                width: 364px;
+                height: 50px;
+                margin-bottom: 14px;
+                justify-content: space-between;
+            }
+
+            .another-login a {
+                flex-basis: 181.5px;
+                height: 50px;
+                background-color: rgb(92, 91, 91);
+                text-decoration: none;
+                text-align: center;
+                line-height: 50px;
+                color: #fff;
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+            .another-flatform-login {
+                background-color: rgb(245, 245, 245);
+                height: 45px;
+                display: flex;
+                padding: 0 45px;
+            }
+
+            .another-login-text {
+                font-size: 12px;
+                color: gray;
+                width: 137px;
+                display: flex;
+                align-items: center;
+            }
+
+            .another-flatform-login a img {
+                width: 19px;
+                height: 19px;
+            }
+
+            .icon-login {
+                display: flex;
+                justify-content: space-evenly;
+                line-height: 53px;
+                width: 137px;
+            }
+
+            .google-login:hover, .facebook-login:hover, .naver-login:hover, .apple-login:hover {
+                opacity: 0.5;
+                transition: all .2s;
+            }
+
+            .id-pw-su {
+                display: flex;
+                flex: none;
+                margin-top: auto;
+                width: 364px;
+            }
+
+            .id-pw-su a {
+                flex: none;
+                text-decoration: none;
+                font-size: 12px;
+                color: gray;
+            }
+
+            .fine-id {
+                margin-right: 20px;
+            }
+
+            .login-sign-up-b {
+                margin-left: auto;
+            }
+
+            .nexon-login:hover, .one-time-login:hover, .qr-login:hover {
+                background-color: #07f;
+                transition: all .5s;
+            }
+            
+            
+
+
         </style>
     </head>
     <body>
@@ -263,6 +515,143 @@
             </div>
         </div>
 
+        <main class="main-area">
+            <div class="h100"></div>
+            <div class="recom-game-top">
+                <div class="recom-text">추천게임</div>
+                <div class="etc-link">
+                    <a href="" class="rhror">고객센터</a>
+                    <a href="" class="qhdks">보안센터</a>
+                </div>
+            </div>
+            <div class="recom-login-area">
+                <div class="recom-game-area">
+                    
+                    <a href="">
+                        <div class="recom-post-area">
+                            <div class="recom-post-img-area">
+                                <img src="img/loh.jpg" alt="" class="recom-img">
+                                <div class="fab fa-facebook-messenger"></div>
+                            </div>
+                            <div class="recom-post-info-area">
+                                <div class="recom-icon">추천</div>
+                                <div class="recom-game-name">영웅의군단</div>
+                                <div class="why-recom-game">이벤트 진행중인</div>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <a href="">
+                        <div class="recom-post-area">
+                            <div class="recom-post-img-area">
+                                <img src="img/ittakes.jpg" alt="" class="recom-img">
+                                <div class="fab fa-facebook-messenger"></div>
+                            </div>
+                            <div class="recom-post-info-area">
+                                <div class="recom-icon">추천</div>
+                                <div class="recom-game-name">It Takes Two</div>
+                                <div class="why-recom-game">최근 게이머가 많은</div>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <a href="">
+                        <div class="recom-post-area">
+                            <div class="recom-post-img-area">
+                                <img src="img/seaof.jpg" alt="" class="recom-img">
+                                <div class="fab fa-facebook-messenger"></div>
+                            </div>
+                            <div class="recom-post-info-area">
+                                <div class="recom-icon">추천</div>
+                                <div class="recom-game-name">씨 오브 씨브즈</div>
+                                <div class="why-recom-game">오랫동안 사랑받는</div>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <a href="">
+                        <div class="recom-post-area">
+                            <div class="recom-post-img-area">
+                                <img src="img/apex.jpg" alt="" class="recom-img">
+                                <div class="fab fa-facebook-messenger"></div>
+                            </div>
+                            <div class="recom-post-info-area">
+                                <div class="recom-icon">추천</div>
+                                <div class="recom-game-name">APEX 온라인</div>
+                                <div class="why-recom-game">오래 플레이하는</div>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <a href="">
+                        <div class="recom-post-area">
+                            <div class="recom-post-img-area">
+                                <img src="img/dishored.jpg" alt="" class="recom-img">
+                                <div class="fab fa-facebook-messenger"></div>
+                            </div>
+                            <div class="recom-post-info-area">
+                                <div class="recom-icon">추천</div>
+                                <div class="recom-game-name">디스아너드3</div>
+                                <div class="why-recom-game">새로 오픈하는</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="login-area">
+                    <a href="">
+                        <div class="nexon-login">NEXTON ID 로그인</div>
+                    </a>
+                    <div class="another-login">
+                        <a href="" class="one-time-login">
+                            <div>일회용 로그인</div>
+                        </a>
+                        <a href="" class="qr-login">
+                            <div>QR 로그인</div>
+                        </a>
+                    </div>
+
+                    <div class="another-flatform-login">
+                        <div class="another-login-text">다른 계정 간편 로그인</div>
+                        <div class="icon-login">
+                            <a href="" class="google-login">
+                                <img src="img/google.png" alt="">
+                            </a>
+                            <a href="" class="facebook-login">
+                                <img src="img/facebook.png" alt="">
+                            </a>
+                            <a href="" class="naver-login">
+                                <img src="img/naver.png" alt="">
+                            </a>
+                            <a href="" class="apple-login">
+                                <img src="img/apple.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="id-pw-su">
+                        <a href="" class="fine-id">
+                            <div class="">넥스트온 ID찾기</div>
+                        </a>
+                        <a href="">
+                            <div class="fine-pw">비밀번호 찾기</div>
+                        </a>
+                        <a href="" class="login-sign-up-b">
+                            <div class="login-sign-up">회원가입</div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </main>
+
+
+
         <script
             src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -278,6 +667,15 @@
             $('.banners').click(function(){
                 $(this).children('div').css('color', 'rgb(219, 219, 219)');
             });
+
+
+            //$('.recom-post-area').hover(function(){
+            //    $(this).children('.recom-img').function name(params) {
+            //        
+            //    }
+            //});
+
+
         </script>
     </body>
 </html>
