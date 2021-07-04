@@ -63,9 +63,14 @@
             .sign-in, .signup, .header-game-menu {
                 transition: all 0.2s;
             }
+            
+            .web-title {
+                margin-left: auto;
+            }
 
             .right-menu {
                 align-items: center;
+                margin-left: auto;
             }
 
             .right-menu a {
@@ -79,6 +84,24 @@
                 width: 256px;
             }
 
+            .header-game-menu2:checked~.side-menu {
+                left: 0px;
+            }
+
+            
+            .side-menu {
+                position: absolute;
+                top: 0;
+                left: -440px;
+                width: 440px;
+                height: 100%;
+                transition: 0.5s;
+                z-index: 1001;
+                background-color: #fff;
+                display: flex;
+                flex-direction: column;
+            } 
+
             .menu-text {
                 margin-left: 10px;
             }
@@ -88,7 +111,12 @@
                 margin-left: 20px;
             }
 
-            .header-game-menu:hover, .sign-up:hover, .rhror:hover, .qhdks:hover, .searchicon:hover, .link-icon:hover, .m-game-info-top-area a:hover, .community:hover, .list-game-name:hover, .sns-group a:hover, .bottom-2-area-span a:hover, .web-box:hover, .footer-menu div a:hover {
+            .header-game-menu:hover, .sign-up:hover, .rhror:hover, .qhdks:hover, 
+            .searchicon:hover, .link-icon:hover, .m-game-info-top-area a:hover, 
+            .community:hover, .list-game-name:hover, .sns-group a:hover, 
+            .bottom-2-area-span a:hover, .web-box:hover, .footer-menu div a:hover,
+            .sm-close-btn:hover, .sm-game-list-area ul li a:hover, .sm-footer-menu-item a:hover,
+            .minimization-btn:hover, .change-video:hover {
                 color: rgb(32, 139, 226);
                 transition: all .3s;
             }
@@ -98,6 +126,13 @@
                 background: rgb(32, 139, 226);
                 border: 2px solid rgb(32, 139, 226);
             }
+
+            .sm-footer-bottom:hover {
+                color: #fff;
+                background: rgb(32, 139, 226);
+                transition: 0.3s;
+            }
+
 
             /* 배너 */
             .banner-bottom-area {
@@ -799,13 +834,14 @@
             .boxex {
                 width: 120px;
                 position: sticky;
-                bottom: 20px;
+                bottom: 0px;
                 display: flex;
                 flex-direction: column;
                 color: gray;
                 font-size: 14px;
                 margin-left: auto;
                 margin-right: 30px;
+                
             }
             
             .move {
@@ -833,6 +869,7 @@
             .move-top {
                 background-color: rgb(245, 245, 245);
                 border: 2px solid gray;
+                margin-bottom: 20px;
             }
 
             .move-pc-area:hover, .move-mobile-area:hover, .move-top:hover {
@@ -1139,37 +1176,492 @@
                 /*확대 이건*/
             }
 
+            
+
+            .sm-top {
+                height: 62px;
+                border-bottom: 1px solid rgb(209, 209, 209);
+            }
+
+            .sm-close-btn {
+                font-size: 23px;
+                padding: 20px;
+                cursor: pointer;
+            }
+
+            .header-game-menu2 {
+                display: none;
+            }
+
+            
+
+            .header-game-menu label {
+                display: flex;
+                padding: 20px;
+                cursor: pointer;
+            }
+
+            .sm-pc-main {
+                overflow-y: scroll;
+            }
+
+            .sm-pc-main, .sm-m-main {
+                padding: 40px 30px 40px 40px;
+                min-height: 680px;
+            }
+
+            .sm-area-item {
+                height: 19px;
+                border-bottom: 2px solid gray;
+                margin-right: 30px;
+                font-size: 12px;
+                font-weight: bold;
+                color: gray;
+                cursor: pointer;
+            }
+
+            .sm-select-platform {
+                display: flex;
+            }
+
+            .sm-r {
+                width: 180px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .sm-game-list-area {
+                display: flex;
+                padding: 40px 0;
+                
+            }
+
+            .sm-game-list-area ul li {
+                list-style: none;
+                font-size: 12px;
+                margin: 8px 0;
+            }
+
+            .sm-game-list-area ul li a {
+                text-decoration: none;
+                color: gray;
+                font-family: "Malgun Gothic";
+            }
+
+            .sm-game-range {
+                font-size: 12px;
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+
+            .sm-game-range-area {
+                margin-bottom: 20px;
+            }
+
+            .sm-footer {
+                height: 100%;
+                background-color: gray;
+                font-family: "Malgun Gothic";
+                font-size: 12px;
+                color: rgb(216, 216, 216);
+            }
+
+            .sm-footer a {
+                font-family: "Malgun Gothic";
+                font-size: 12px;
+                color: rgb(216, 216, 216);
+                text-decoration: none;
+            }
+
+            .sm-footer-top {
+                height: 145px;
+                background-color: rgb(32, 32, 32);
+                display: flex;
+                flex-wrap: wrap;
+                padding: 30px 50px;
+            }
+
+            .sm-footer-bottom {
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                background-color: rgb(22, 22, 22);;
+            }
+
+            .sm-footer-menu-item {
+                display: flex;
+                width: 113px;
+            }
+
+            .sm-footer-menu-item a {
+                display: flex;
+            }
+
+            .c2 {
+                display: flex;
+                align-items: center;
+            }
+
+            .c3 {
+                display: flex;
+                align-items: flex-end;
+            }
+
+            .sm-fmi-icon {
+                font-size: 15px;
+                margin-right: 5px;
+                width: 20px;
+            }
+
+            .sm-m-main {
+                display: none;
+            }
+
+            .sm-pc-main::-webkit-scrollbar {
+                width: 16px;
+                
+            }
+
+            .sm-pc-main::-webkit-scrollbar-thumb {
+                box-shadow: inset 0 0 10px 10px rgb(216, 216, 216);
+                border: solid 5px transparent;
+                border-radius: 12px;
+            }
+
+            .sm-pc-main::-webkit-scrollbar-track {
+                border: solid 5px transparent;
+            }
+
+            .dimmed {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: black;
+                opacity: 0.6;
+                z-index: 1000;
+                display: none;
+            }
+
+            .big-recom-video-area {
+                width: 260px;
+                height: 290px;
+                position: absolute;
+                bottom: 20px;
+                right: 0px;
+                display: flex;
+                flex-direction: column;
+                cursor: pointer;
+            }
+            
+            .recom-video-container {
+                position: relative;
+            }
+
+            .br-video-area {
+                height: 145px;
+            }
+
+            .br-video-area img {
+                width: 100%;
+            }
+
+            .br-info-area {
+                padding: 16px;
+                height: 145px;
+                background-color:#fff;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .bri-top {
+                display: flex;
+                font-size: 12px;
+            }
+
+            .ncc {
+                font-family: 'nexon-nanum2';
+                font-weight: bold;
+                color: black;
+            }
+
+            .ncc span {
+                font-size: 11px;
+                color: #07f;
+            }
+
+
+
+            .minimization-btn {
+                margin-left: auto;
+                color: gray;
+                border-bottom: 1px solid;
+            }
+
+            .bri-description {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+            .change-video {
+                margin-top: auto;
+                font-size: 12px;
+                color: gray;
+                font-weight: bold;
+                border-bottom: 1px solid;
+                width: 72px;
+            }
+
+            .recom-default-title {
+                font-family: 'nexon-nanum2';
+                font-weight: bold;
+                font-size: 15px;
+                color: black;
+                margin: 10px 0;
+            }
+
+            .bri-description {
+                color: gray;
+                font-size: 12px;
+
+            }
+
+
         </style>
     </head>
     <body>
-        <!-- <div class="boxex">
-            <div class="recom-video-area">
-                <div class="recom-video-somenail">
-                    <img src="img/dummyyoutube.jpg" alt="">
-                </div>
-                <div class="move recom-video">
-                    <div class="recom-video-icon far fa-play-circle"></div>
-                    <div>추천동영상</div>
-                </div>
-            </div>
-
-            <div class="move move-pc-area">
-                <div class="movefas fas fa-desktop"></div>
-                <div>PC게임</div>
-            </div>
-            <div class="move move-mobile-area">
-                <div class="movefas fas fa-mobile-alt"></div>
-                <div>모바일게임</div>
-            </div>
-            <div class="move move-top">
-                <div class="movefas fas fa-arrow-up"></div>
-                <div>TOP</div>
-            </div>
-        </div> -->
+        <label for="header-game-menu2">
+            <div class="dimmed"></div>
+        </label>
+        
         <header class="header-area">
-            <div class="header-game-menu">
-                <div class="fas fa-bars"></div>
-                <div class="menu-text">메뉴</div>
+           
+                <div class="header-game-menu">
+                    <label for="header-game-menu2">
+                        <div class="fas fa-bars"></div>
+                        <div class="menu-text">메뉴</div>
+                    </label>
+                </div>
+            
+            <input type="checkbox" class="header-game-menu2" id="header-game-menu2">
+            <label for="header-game-menu2" class="test-label"><span class="burger-sticks"></span></label>
+            <div class="side-menu">
+                <div class="sm-top">
+                    <label for="header-game-menu2">
+                        <div class="sm-close-btn fas fa-times"></div>
+                    </label>
+                </div>
+                
+                <div class="sm-pc-main">
+                    <div class="sm-select-platform">
+                        <div class="sm-area-item item-pc">PC 게임</div>
+                        <div class="sm-area-item item-m">모바일 게임</div>
+                    </div>
+
+                    <div class="sm-game-list-area">
+                        <div class="sm-r">
+                            <div class="sm-game-range-area">
+                                <div class="sm-game-range">A~Z</div>
+                                <ul>
+                                    <li><a href="">EA SPORTS FIFA ONLINE 4</a></li>
+                                    <li><a href="">V4</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="sm-game-range-area">
+                                <div class="sm-game-range">ㄱ~ㄹ</div>
+                                <ul>
+                                    <li><a href="">던전앤파이터</a></li>
+                                    <li><a href="">드래곤네스트</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="sm-game-range-area">
+                                <div class="sm-game-range">ㅁ~ㅅ</div>
+                                <ul>
+                                    <li><a href="">마비노기</a></li>
+                                    <li><a href="">마비노기 영웅전</a></li>
+                                    <li><a href="">메이플스토리</a></li>
+                                    <li><a href="">메이플스토리2</a></li>
+                                    <li><a href="">바람의나라</a></li>
+                                    <li><a href="">버블파이터</a></li>
+                                    <li><a href="">사이퍼즈</a></li>
+                                    <li><a href="">서든어택</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sm-r">
+                            <div class="sm-game-range-area">
+                                <div class="sm-game-range">ㅇ~ㅈ</div>
+                                <ul>
+                                    <li><a href="">아스가르드</a></li>
+                                    <li><a href="">아키에이지</a></li>
+                                    <li><a href="">어둠의전설</a></li>
+                                    <li><a href="">엘소드</a></li>
+                                    <li><a href="">일랜시아</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="sm-game-range-area">
+                                <div class="sm-game-range">ㅊ~ㅋ</div>
+                                <ul>
+                                    <li><a href="">천애명월도</a></li>
+                                    <li><a href="">카운터사이드</a></li>
+                                    <li><a href="">카운터스트라이크온라인</a></li>
+                                    <li><a href="">카트라이더</a></li>
+                                    <li><a href="">카트라이더:드리프트</a></li>
+                                    <li><a href="">커츠펠</a></li>
+                                    <li><a href="">크레이지아케이드</a></li>
+                                    <li><a href="">클로저스</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="sm-game-range-area">
+                                <div class="sm-game-range">ㅌ~ㅎ</div>
+                                <ul>
+                                    <li><a href="">테일즈런너</a></li>
+                                    <li><a href="">테일즈위버</a></li>
+                                    <li><a href="">트리오브세이비어</a></li>
+                                    <li><a href="">파이널판타지14</a></li>
+                                    <li><a href="">프리스타일2</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="sm-m-main">
+                    <div class="sm-select-platform">
+                        <div class="sm-area-item item-pc">PC 게임</div>
+                        <div class="sm-area-item item-m">모바일 게임</div>
+                    </div>
+
+                    <div class="sm-game-list-area">
+                        <div class="sm-r">
+                            <div class="sm-game-range-area">
+                                <div class="sm-game-range">A~Z</div>
+                                <ul>
+                                    <li><a href="">EA SPORTS FIFA Mobile</a></li>
+                                    <li><a href="">EA SPORTS FIFA ONLINE 4 M</a></li>
+                                    <li><a href="">V4</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="sm-game-range-area">
+                                <div class="sm-game-range">ㄱ~ㄹ</div>
+                                <ul>
+                                    <li><a href="">고질라 디펜스 포스</a></li>
+                                    <li><a href="">다크어벤저3</a></li>
+                                    <li><a href="">런웨이 스토리</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="sm-game-range-area">
+                                <div class="sm-game-range">ㅁ~ㅅ</div>
+                                <ul>
+                                    <li><a href="">메이플스토리M</a></li>
+                                    <li><a href="">바람의나라: 연</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sm-r">
+                            <div class="sm-game-range-area">
+                                <div class="sm-game-range">ㅇ~ㅈ</div>
+                                <ul>
+                                    <li><a href="">액스</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="sm-game-range-area">
+                                <div class="sm-game-range">ㅊ~ㅋ</div>
+                                <ul>
+                                    <li><a href="">카운터사이드</a></li>
+                                    <li><a href="">카트라이더 러쉬플러스</a></li>
+                                    <li><a href="">크레이지아케이드 BnB M</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="sm-game-range-area">
+                                <div class="sm-game-range">ㅌ~ㅎ</div>
+                                <ul>
+                                    <li><a href="">트라하</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="sm-footer">
+                    <div class="sm-footer-top">
+                        <div class="c1 sm-footer-menu-item">
+                            <a href="">
+                                <div class="sm-fmi-icon fas fa-user-circle"></div>
+                                <div>내정보</div>
+                            </a>
+                        </div>
+
+                        <div class="c1 sm-footer-menu-item">
+                            <a href="">
+                                <div class="sm-fmi-icon fab fa-etsy"></div>
+                                <div>이벤트</div>
+                            </a>
+                        </div>
+
+                        <div class="c1 sm-footer-menu-item">
+                            <a href="">
+                                <div class="sm-fmi-icon fas fa-coins"></div>
+                                <div>넥슨캐시</div>
+                            </a>
+                        </div>
+
+                        <div class="c2 sm-footer-menu-item">
+                            <a href="">
+                                <div class="sm-fmi-icon fas fa-shield-alt"></div>
+                                <div>보안센터</div>
+                            </a>
+                        </div>
+
+                        <div class="c2 sm-footer-menu-item">
+                            <a href="">
+                                <div class="sm-fmi-icon fas fa-info-circle"></div>
+                                <div>공지사항</div>
+                            </a>
+                        </div>
+
+                        <div class="c2 sm-footer-menu-item">
+                            <a href="">
+                                <div class="sm-fmi-icon fas fa-plug"></div>
+                                <div>넥슨플러그</div>
+                            </a>
+                        </div>
+
+                        <div class="c3 sm-footer-menu-item">
+                            <a href="">
+                                <div class="sm-fmi-icon fas fa-question-circle"></div>
+                                <div>고객센터</div>
+                            </a>
+                        </div>
+
+                        <div class="c3 sm-footer-menu-item">
+                            <a href="">
+                                <div class="sm-fmi-icon fas fa-calendar-check"></div>
+                                <div>넥슨달력</div>
+                            </a>
+                        </div>
+
+                        <div class="c3 sm-footer-menu-item">
+                            <a href="">
+                                <div class="sm-fmi-icon fas fa-play-circle"></div>
+                                <div>넥슨플레이</div>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="">
+                        <div class="sm-footer-bottom">전체서비스</div>
+                    </a>
+                </div>
             </div>
             <div class="web-title">
                 <a href="">
@@ -1946,7 +2438,7 @@
             </div>
             <!-- </div> hide하는 영역 div 종료 지점 -->
             <div class="list-show-area">
-                <div class="ggame-area">
+                <div class="ggame-area" id="list-move-point">
                     <div class="ggame game-pc-text">PC게임</div>
                 </div>
 
@@ -2265,7 +2757,7 @@
                 </div>
 
 
-                <div class="ggame-area">
+                <div class="ggame-area" id="list-move-point-m">
                     <div class="ggame game-pc-text">모바일게임</div>
                     <a href="" class="community-a" target="_blank">
                         <div class="community">
@@ -2369,28 +2861,48 @@
 
         </main>
         <div class="boxex">
-            <div class="recom-video-area">
-                <div class="recom-video-somenail">
-                    <img src="img/dummyyoutube.jpg" alt="">
+            <div class="recom-video-container">
+                <div class="big-recom-video-area">
+                    <div class="br-video-area">
+                        <img src="img/dummyyoutube.jpg" alt="">
+                    </div>
+                    <div class="br-info-area">
+                        <div class="bri-top">
+                            <div class="ncc">NCC<span>βeta</span></div>
+                            <div class="minimization-btn" onclick="">최소화</div>  
+                        </div>
+                        <div class="bri-title">
+                            <div class="recom-default-title">게임하기 전에 보고가세요. #레전드</div>
+                        </div>
+                        <div class="bri-description">[디스아너드1] 이보다 더 절망스러울 수 없다!</div>
+                        <div class="change-video" onclick="">다른영상보기</div>
+                    </div>
                 </div>
-                <div class="move recom-video">
-                    <div class="recom-video-icon far fa-play-circle"></div>
-                    <div>추천동영상</div>
+
+                <div class="recom-video-area">
+                    <div class="recom-video-somenail demove">
+                        <img src="img/dummyyoutube.jpg" alt="">
+                    </div>
+                    <div class="move recom-video">
+                        <div class="recom-video-icon far fa-play-circle"></div>
+                        <div>추천동영상</div>
+                    </div>
                 </div>
             </div>
 
-            <div class="move move-pc-area">
+            <div class="move move-pc-area demove">
                 <div class="movefas fas fa-desktop"></div>
                 <div>PC게임</div>
             </div>
-            <div class="move move-mobile-area">
+            <div class="move move-mobile-area demove">
                 <div class="movefas fas fa-mobile-alt"></div>
                 <div>모바일게임</div>
             </div>
-            <div class="move move-top">
+            <div class="move move-top demove">
                 <div class="movefas fas fa-arrow-up"></div>
                 <div>TOP</div>
             </div>
+
         </div>
         </div>
 
@@ -2483,20 +2995,32 @@
             //        
             //    }
             //});
-
+            
             $('.gmae-mobile-text').click(function(){
                 var offset = $('.offset-dummy').offset();
                 $('html').animate({scrollTop: offset.top}, 0);
             });
             
             $('.move-pc-area').click(function(){
-                var offset = $('.game-pc-text').offset();
-                $('html').animate({scrollTop: offset.top}, 0);
+                let album_display = $('.album-show-area').css("display");
+                if(album_display == "none"){
+                    var offset = $('#list-move-point').offset();
+                    $('html').animate({scrollTop: offset.top}, 0);
+                } else {    
+                    var offset = $('.game-pc-text').offset();
+                    $('html').animate({scrollTop: offset.top}, 0);
+                }
             });
 
             $('.move-mobile-area').click(function(){
-                var offset = $('.offset-dummy').offset();
-                $('html').animate({scrollTop: offset.top}, 0);
+                let album_display = $('.album-show-area').css("display");
+                if(album_display == "none"){
+                    var offset = $('#list-move-point-m').offset();
+                    $('html').animate({scrollTop: offset.top}, 0);
+                } else {
+                    var offset = $('.offset-dummy').offset();
+                    $('html').animate({scrollTop: offset.top}, 0);
+                }
             });
 
             $('.move-top').click(function(){
@@ -2569,6 +3093,80 @@
                 $('.mobile-game-post-area').css("height", "450px");
                 $('.mobile-game-post-area').css("overflow", "hidden");
             }
+            
+            // 왼쪽 사이드 메뉴 pc, mobile 메뉴 전환
+            $('.item-pc').click(function(){
+                $('.sm-m-main').hide();
+                $('.sm-pc-main').show();
+            });
+            
+            $('.item-m').click(function(){
+                $('.sm-m-main').show();
+                $('.sm-pc-main').hide();
+            });
+
+            // 왼쪽 사이드 메뉴 오픈 시 딤처리
+            $('#header-game-menu2').click(function(){
+                if($('#header-game-menu2').is(":checked") == true) {
+                    var offset = $('.web-title').offset();
+                    $('html').animate({scrollTop: offset.top}, 0);
+                    $('html').css('height', '549px');
+                    $('html').css('overflow', 'hidden');
+                    $('.dimmed').css("display", "block");
+                }
+                else {
+                    $('html').css('height', '100%');
+                    $('html').css('overflow', '');
+                    $('.dimmed').css("display", "none");
+                }
+            });
+
+
+            // 추천동영상 스크롤 시 확대, 축소 조건
+            let scroll_position = $(window).scrollTop();
+            if(scroll_position == 0) {
+                $('.demove').css('display', 'none');
+                $('.big-recom-video-area').css("display", "block");
+            } else {
+                $('.demove').css('display', '');
+                $('.big-recom-video-area').css("display", "none");
+            }
+            $(document).scroll(function(){
+                let scroll_position = $(window).scrollTop();
+                if(scroll_position == 0) {
+                    $('.demove').css('display', 'none');
+                    $('.big-recom-video-area').css("display", "block");
+                } else {
+                    $('.demove').css('display', '');
+                    $('.big-recom-video-area').css("display", "none");
+                }
+            });
+
+
+            // 우측 사이드 메뉴에서 추천동영상 hover 시 확대
+            $(".recom-video-area").hover(function(){
+                $('.big-recom-video-area').css("display", "block");
+            });
+
+            $(".big-recom-video-area").hover(function(){
+                $('.big-recom-video-area').css("display", "block");
+            }, function(){
+                let scroll_position = $(window).scrollTop();
+                if(scroll_position != 0)
+                    $('.big-recom-video-area').css("display", "none");
+            });
+
+            
+
+
+            
+            
+
+
+            
+            
+
+            
             
 
         </script>
