@@ -116,7 +116,7 @@
             .community:hover, .list-game-name:hover, .sns-group a:hover, 
             .bottom-2-area-span a:hover, .web-box:hover, .footer-menu div a:hover,
             .sm-close-btn:hover, .sm-game-list-area ul li a:hover, .sm-footer-menu-item a:hover,
-            .minimization-btn:hover, .change-video:hover {
+            .minimization-btn:hover, .change-video:hover, .md-close-btn:hover {
                 color: rgb(32, 139, 226);
                 transition: all .3s;
             }
@@ -1476,8 +1476,7 @@
 
             .recom-video-modal-area a {
                 display: flex;
-                background-color: aqua;
-                width: 100%;
+                
                 text-decoration: none;
                 color: gray;
                 font-size: 13px;
@@ -1573,24 +1572,54 @@
                 margin-top: auto;
             }
 
+            .md-game-tile-area {
+                width: 300px;
+            }
             
+            .md-close-btn {
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                font-size: 30px;
+                cursor: pointer;
+            }
 
+            .md-total-container {
+                display: none;
+            }
+
+
+            .r2 {
+                margin-bottom: 20px;
+                display: none;
+                cursor: pointer;
+            }
+
+            .r2:hover::after {
+                content: "원래대로 펼치기";
+                transition: all .3s;
+                
+            }
+
+           
         </style>
     </head>
     <body>
-        <div>
+        <div class="md-total-container">
             <div class="dimmed2"></div>
             <div class="recom-video-modal-area">
-                <a href="">
-                    <div class="md-game-info">
-                        <div class="md-game-info-img">
-                            <img src="img/md_dishored.png" alt="">
+                <div class="md-close-btn fas fa-times"></div>
+                <div class="md-game-tile-area">
+                    <a href="">
+                        <div class="md-game-info">
+                            <div class="md-game-info-img">
+                                <img src="img/md_dishored.png" alt="">
+                            </div>
+                            <div>디스아너드</div>
+                            <div class="fas fa-home"></div>
                         </div>
-                        <div>디스아너드</div>
-                        <div class="fas fa-home"></div>
-                    </div>
-                    <div></div>
-                </a>
+                    </a>
+                </div>
                 <div class="md-topic-area">게임하기 전에 보고가세요. # 레전드</div>
                 <div class="md-etc">
                     <div class="md-game-tag">#디스아너드 #디스아너드레전드</div>
@@ -3061,14 +3090,22 @@
                     </div>
                 </div>
 
+                <div class="r2 move recom-video">
+                    <div class="recom-video-icon far fa-play-circle"></div>
+                    <div>추천동영상</div>
+                </div>
+
                 <div class="recom-video-area">
                     <div class="recom-video-somenail demove">
                         <img src="img/dummyyoutube.jpg" alt="">
                     </div>
-                    <div class="move recom-video">
+                    <div class="r1 move recom-video">
                         <div class="recom-video-icon far fa-play-circle"></div>
                         <div>추천동영상</div>
                     </div>
+
+                    
+                    
                 </div>
             </div>
 
@@ -3317,7 +3354,9 @@
                 let scroll_position = $(window).scrollTop();
                 if(scroll_position == 0) {
                     $('.demove').css('display', 'none');
-                    $('.big-recom-video-area').css("display", "block");
+                    let vals = $('.r2').css('display'); // 최소화 버튼으로 r2영역인 경우 스크롤 0일 때 맥스 화면 display none 처리
+                    if(vals == "none")
+                        $('.big-recom-video-area').css("display", "block");
                 } else {
                     $('.demove').css('display', '');
                     $('.big-recom-video-area').css("display", "none");
@@ -3338,18 +3377,30 @@
                     $('.big-recom-video-area').css("display", "none");
             });
 
-            
+            // 모달 팝업 
+            $('.big-recom-video-area').click(function(){
+                $('.md-total-container').css("display", "block");
+                $("html").css("overflow", "hidden");
+            });
+
+            $('.md-close-btn').click(function(){
+                $('.md-total-container').css("display", "none");
+                $("html").css("overflow", "");
+            });
+
+            //추천동영상 최소화
+            $('.minimization-btn').click(function(){
+                $('.big-recom-video-area').css('display', 'none');
+                $('.recom-video-area').css("display", "none");
+                $('.r2').css('display', "flex");
+            });
 
 
-            
-            
+            $('.r2').click(function(){
+                $('.recom-video-area').css("display", "block");
+                $('.r2').css('display', "none");
+            });
 
-
-            
-            
-
-            
-            
 
         </script>
     </body>
