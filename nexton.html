@@ -1428,10 +1428,192 @@
 
             }
 
+            /* 모달 팝업 */
+            .recom-video-modal-area {
+                z-index: 1100;
+                width: 950px;
+                height: 840px;
+                background-color: #fff;
+                border-radius: 8px;
+                position:fixed;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                top: 50%;
+            }
+
+            .dimmed2 {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: black;
+                opacity: 0.6;
+                z-index: 1000;
+            }
+
+            .recom-video-modal-area {
+                display: flex;
+                flex-direction: column;
+                padding: 50px 60px 40px 60px;
+            }
+
+            .md-game-info {
+                display: flex;
+                align-items: center;
+            }
+
+            .md-game-info-img {
+                width: 25px;
+                margin-right: 10px;
+            }
+
+            .md-game-info-img img {
+                width: 100%;
+                border-radius: 20px;
+                display: flex;
+            }
+
+            .recom-video-modal-area a {
+                display: flex;
+                background-color: aqua;
+                width: 100%;
+                text-decoration: none;
+                color: gray;
+                font-size: 13px;
+                font-weight: bold;
+            }
+
+            .md-etc {
+                display: flex;
+            }
+
+            .md-another-game {
+                margin-left: auto;
+            }
+
+            .md-game-info .fas {
+                margin-left: 5px;
+                font-size: 11px;
+            }
+
+            .md-topic-area {
+                font-size: 23px;
+                font-weight: bold;
+                font-family: 'nexon-nanum2';
+                margin: 20px 0 10px 0;
+            }
+
+            .md-game-tag {
+                font-size: 12px;
+                color: gray;
+
+            }
+
+            .md-another-game {
+                border: 1px solid rgb(197, 197, 197);
+                color: rgb(197, 197, 197);
+                padding: 3px 6px;
+                font-size: 12px;
+            }
+
+            .md-another-game:hover {
+                background-color: rgb(197, 197, 197);
+                color: #fff;
+                transition: .5s;
+            }
+
+            .md-youtube-area {
+                margin: 20px 0;
+            }
+
+            .md-youtube-title {
+                font-family: 'nexon-nanum2';
+                font-size: 17px;
+                font-weight: bold;
+            }
+
+            .md-youtube-info {
+                display: flex;
+                color: gray;
+                margin: 10px 0;
+                font-size: 12px;
+            }
+
+            .md-yt-channel-name {
+                margin-right: 20px;
+            }
+
+            .md-ncc-info {
+                display: flex;
+                align-items: center;
+                margin: 10px 0;
+            }
+
+            .md-ncc {
+                font-size: 15px;
+                font-weight: bold;
+                margin-right: 10px;
+            }
+
+            .md-ncc span {
+                font-family: 'nexon-nanum2';
+                font-size: 12px;
+                color: #07f;
+            }
+
+            .md-ncc-des, .youtube-r {
+                color: gray;
+                font-size: 12px;
+            }
+
+            .youtube-r {
+                border-top: 1px solid rgb(226, 226, 226);
+                padding-top: 10px;
+                margin-top: auto;
+            }
+
+            
 
         </style>
     </head>
     <body>
+        <div>
+            <div class="dimmed2"></div>
+            <div class="recom-video-modal-area">
+                <a href="">
+                    <div class="md-game-info">
+                        <div class="md-game-info-img">
+                            <img src="img/md_dishored.png" alt="">
+                        </div>
+                        <div>디스아너드</div>
+                        <div class="fas fa-home"></div>
+                    </div>
+                    <div></div>
+                </a>
+                <div class="md-topic-area">게임하기 전에 보고가세요. # 레전드</div>
+                <div class="md-etc">
+                    <div class="md-game-tag">#디스아너드 #디스아너드레전드</div>
+                    <div class="md-another-game">다른 영상 보기</div>
+                </div>
+                <div class="md-youtube-area">
+                    <iframe width="830" height="460" src="https://www.youtube.com/embed/T4D0rX-ZyfA?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    </iframe>
+                </div>
+                <div class="md-youtube-title">전염병이 창궐한 도시 속 최강의 암살자【디스아너드1 스토리】【완전판】</div>
+                <div class="md-youtube-info">
+                    <div class="md-yt-channel-name">콩피디</div>
+                    <div class="md-yt-date">2020-5-23</div>
+                </div>
+                <div class="md-ncc-info">
+                    <div class="md-ncc">NCC<span>βeta</span></div>
+                    <div class="md-ncc-des">본 콘텐츠는 YouTube 영상 중 넥슨 콘텐츠 추천 시스템에 의해 자동으로 선정되어 노출 되었습니다.</div>
+                </div>
+                <div class="youtube-r">영상 콘텐츠에 대한 저작권 및 책임은 YouTube 커뮤니티 가이드에 따릅니다.</div>
+            </div>
+        </div>
+
         <label for="header-game-menu2">
             <div class="dimmed"></div>
         </label>
