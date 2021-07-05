@@ -598,24 +598,20 @@
                 padding: 20px 30px;
             }
             
-            .tag-one {
+            .tag-area > div {
                 font-size: 11px;
                 color: gray;
-                margin-right: 30px;
+                margin-right: 20px;
                 line-height: 20px;
-                
-            }
-
-            .tag-one:hover {
-                color: rgb(3, 145, 240);
-                transition: all .5s;
+                cursor: pointer;
+                padding: 0 10px;
             }
 
             .test-tag {
                 padding: 0 10px;
                 border-radius: 10px;
                 background-color: black;
-                color: #fff;
+                color: #fff !important;
             }
 
             .ggame-area {
@@ -640,8 +636,8 @@
                 color: #07f;
                 transition: .5s;
             }
-            
-            .fa-th-large {
+
+            .list-checked {
                 border-color: black;
                 background-color: black;
                 color: #fff;
@@ -838,7 +834,7 @@
                 display: flex;
                 flex-direction: column;
                 color: gray;
-                font-size: 14px;
+                font-size: 13px;
                 margin-left: auto;
                 margin-right: 30px;
                 
@@ -1164,19 +1160,12 @@
 
             .recom-video-somenail {
                 height: 62px;
-                background-color: green;
                 overflow: hidden;
             }
 
             .recom-video-somenail img {
                 width: 100%;
             }
-
-            .recom-video-area:hover {
-                /*확대 이건*/
-            }
-
-            
 
             .sm-top {
                 height: 62px;
@@ -1463,6 +1452,11 @@
                 align-items: center;
             }
 
+            .md-game-info a {
+                display: flex;
+                align-items: center;
+            }
+
             .md-game-info-img {
                 width: 25px;
                 margin-right: 10px;
@@ -1595,12 +1589,28 @@
                 cursor: pointer;
             }
 
-            .r2:hover::after {
-                content: "원래대로 펼치기";
-                transition: all .3s;
-                
+            .r2:hover {
+                font-size: 0px;
             }
 
+            .r2:hover::after {
+                content: "원래대로 펼치기";
+                font-size: 13px;
+            }
+
+            .item-pc1, .item-m2 {
+                color: black;
+            }
+
+            .tag-one:hover {
+                color: mediumturquoise !important;
+            }
+
+            .tag-one-selected {
+                color: white;
+                background-color: black;
+                border-radius: 10px;
+            }
            
         </style>
     </head>
@@ -1610,15 +1620,17 @@
             <div class="recom-video-modal-area">
                 <div class="md-close-btn fas fa-times"></div>
                 <div class="md-game-tile-area">
-                    <a href="">
+                    
                         <div class="md-game-info">
-                            <div class="md-game-info-img">
-                                <img src="img/md_dishored.png" alt="">
-                            </div>
-                            <div>디스아너드</div>
-                            <div class="fas fa-home"></div>
+                            <a href="">
+                                <div class="md-game-info-img">
+                                    <img src="img/md_dishored.png" alt="">
+                                </div>
+                                <div>디스아너드</div>
+                                <div class="fas fa-home"></div>
+                            </a>
                         </div>
-                    </a>
+                    
                 </div>
                 <div class="md-topic-area">게임하기 전에 보고가세요. # 레전드</div>
                 <div class="md-etc">
@@ -1626,7 +1638,7 @@
                     <div class="md-another-game">다른 영상 보기</div>
                 </div>
                 <div class="md-youtube-area">
-                    <iframe width="830" height="460" src="https://www.youtube.com/embed/T4D0rX-ZyfA?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="830" height="460" src="https://www.youtube.com/embed/T4D0rX-ZyfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                     </iframe>
                 </div>
@@ -1667,8 +1679,8 @@
                 
                 <div class="sm-pc-main">
                     <div class="sm-select-platform">
-                        <div class="sm-area-item item-pc">PC 게임</div>
-                        <div class="sm-area-item item-m">모바일 게임</div>
+                        <div class="item-pc1 sm-area-item item-pc">PC 게임</div>
+                        <div class="item-m1 sm-area-item item-m">모바일 게임</div>
                     </div>
 
                     <div class="sm-game-list-area">
@@ -1745,8 +1757,8 @@
                 </div>
                 <div class="sm-m-main">
                     <div class="sm-select-platform">
-                        <div class="sm-area-item item-pc">PC 게임</div>
-                        <div class="sm-area-item item-m">모바일 게임</div>
+                        <div class="item-pc2 sm-area-item item-pc">PC 게임</div>
+                        <div class="item-m2 sm-area-item item-m">모바일 게임</div>
                     </div>
 
                     <div class="sm-game-list-area">
@@ -2079,8 +2091,8 @@
             <div class="recom-game-top">
                 <div class="recom-text">전체게임</div>
                 <div class="all-game-icon-box">
-                    <div class="pc-all-list all-game-icon fas fa-th-large"></div>
-                    <div class="mobile-all-list all-game-icon fas fa-bars"></div>
+                    <div class="pc-all-list all-game-icon fas fa-th-large list-checked"></div>
+                    <div class="mobile-all-list all-game-icon fas fa-bars "></div>
                 </div>
                 <div class="game-search-area">
                     <input type="text" class="game-search-input" placeholder="게임명 검색" >
@@ -2091,7 +2103,7 @@
 
 
             <div class="tag-area">
-                <div class="tag-one test-tag">#전체</div>
+                <div class="tag-one test-tag first-tag">#전체</div>
                 <div class="tag-one">#최근 게이머가 많은 TOP10</div>
                 <div class="tag-one">#오래 플레이하는 TOP10</div>
                 <div class="tag-one">#RPG</div>
@@ -2121,7 +2133,7 @@
                     <div class="pc-game-post">
                         <div class="pc-game-post">
                             <div class="pc-game-img-area">
-                                <img src="img/귀혼.jpg" alt="">
+                                <img src="img/귀혼.jpg" alt="" >
                             </div>
                             <div class="pc-game-info-area">
                                 <div class="pc-game-title-a">
@@ -2144,7 +2156,7 @@
                     <div class="pc-game-post" onclick="link_game();">
                         <div class="pc-game-post">
                             <div class="pc-game-img-area">
-                                <img src="img/dishored2.jpg" alt="">
+                                <img src="img/dishored2.jpg" alt="" onmouseover="zoomIn(event)" onmouseout="zoomOut(event)">
                             </div>
                             <div class="pc-game-info-area">
                                 <div class="pc-game-title-a">
@@ -2167,7 +2179,7 @@
                     <div class="pc-game-post" onclick="link_game();">
                         <div class="pc-game-post">
                             <div class="pc-game-img-area">
-                                <img src="img/귀혼.jpg" alt="">
+                                <img src="img/귀혼.jpg" alt="" onmouseover="zoomIn(event)" onmouseout="zoomOut(event)">
                             </div>
                             <div class="pc-game-info-area">
                                 <div class="pc-game-title-a">
@@ -2190,7 +2202,7 @@
                     <div class="pc-game-post" onclick="link_game();">
                         <div class="pc-game-post">
                             <div class="pc-game-img-area">
-                                <img src="img/귀혼.jpg" alt="">
+                                <img src="img/귀혼.jpg" alt="" onmouseover="zoomIn(event)" onmouseout="zoomOut(event)">
                             </div>
                             <div class="pc-game-info-area">
                                 <div class="pc-game-title-a">
@@ -2213,7 +2225,7 @@
                     <div class="pc-game-post" onclick="link_game();">
                         <div class="pc-game-post">
                             <div class="pc-game-img-area">
-                                <img src="img/귀혼.jpg" alt="">
+                                <img src="img/귀혼.jpg" alt="" onmouseover="zoomIn(event)" onmouseout="zoomOut(event)">
                             </div>
                             <div class="pc-game-info-area">
                                 <div class="pc-game-title-a">
@@ -3073,9 +3085,9 @@
         </main>
         <div class="boxex">
             <div class="recom-video-container">
-                <div class="big-recom-video-area">
+                <div class="big-recom-video-area" >
                     <div class="br-video-area">
-                        <img src="img/dummyyoutube.jpg" alt="">
+                        <img src="img/dummyyoutube.jpg" alt="" >
                     </div>
                     <div class="br-info-area">
                         <div class="bri-top">
@@ -3378,9 +3390,12 @@
             });
 
             // 모달 팝업 
-            $('.big-recom-video-area').click(function(){
-                $('.md-total-container').css("display", "block");
-                $("html").css("overflow", "hidden");
+            $('.big-recom-video-area').click(function(event){
+                let target = event.target;
+                if(target != event.currentTarget.querySelector('.minimization-btn')) {
+                    $('.md-total-container').css("display", "block");
+                    $("html").css("overflow", "hidden");
+                }
             });
 
             $('.md-close-btn').click(function(){
@@ -3400,6 +3415,48 @@
                 $('.recom-video-area').css("display", "block");
                 $('.r2').css('display', "none");
             });
+
+            $('.r2').hover(function(){
+                $('.recom-video-icon').css('display', 'none');
+
+            }, function(){
+                $('.recom-video-icon').css('display', 'block');
+            });
+
+            // 이미지 확대, 축소
+            function zoomIn(event) {
+                event.target.style.transform = "scale(1.2)";
+                event.target.style.zIndex = 1;
+                event.target.style.transition = "all 0.5s";
+            }
+
+            function zoomOut(event) {
+                event.target.style.transform = "scale(1)";
+                event.target.style.zIndex = 0;
+                event.target.style.transition = "all 0.5s";
+            }
+           
+           //태그 선택
+           $('.tag-one').click(function(e){
+                $('.tag-area > div').removeClass('test-tag');
+                $('.tag-area > div').addClass('tag-one');
+                $(this).addClass('test-tag');
+                $(this).removeClass('tag-one');
+           });
+
+           $('.all-game-icon').click(function(){
+                $('.all-game-icon').removeClass('list-checked');
+                $(this).addClass('list-checked');
+                $('.tag-area > div').removeClass('test-tag');
+                $('.first-tag').addClass('test-tag');
+                $('.first-tag').removeClass('tag-one');
+           });
+
+           $('.pc-game-post').hover(function(){
+                $(this).children(".pc-game-img-area").children("img").css({"transform": "scale(1.2)", "transition":"all 0.5s"});
+           }, function(){
+                $(this).children(".pc-game-img-area").children("img").css({"transform": "scale(1)", "transition":"all 0.5s"});
+           });
 
 
         </script>
