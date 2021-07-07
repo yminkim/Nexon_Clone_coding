@@ -95,7 +95,7 @@
                 left: -440px;
                 width: 440px;
                 height: 100%;
-                transition: 0.5s;
+                transition: 0.3s;
                 z-index: 1001;
                 background-color: #fff;
                 display: flex;
@@ -145,18 +145,73 @@
                 height: 80px;
             }
 
-            .background-img {
-                /* background-image: linear-gradient(to top, black, #d5d5d5); */
+            .bck-img-area {
                 height: 550px;
-                background: linear-gradient(
-                    to bottom,
-                    
-                    rgba(20, 20, 20, 0) 75%,
-                    rgba(20, 20, 20, 1) 100%
-                ), url("img/카야호.jpg");
+
             }
 
-            .background-img img{
+            .bck-img-area::after {
+                content: ""; 
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: linear-gradient(to bottom, rgba(20, 20, 20, 0) 75%, rgba(20, 20, 20, 1) 100%);
+            }
+
+            .background-img-1 {
+                background-image: url('img/banner_loh.jpg');
+                transition: all 0.5s linear;
+            }
+
+            .background-img-2 {
+                background-image:url('img/banner_dishored3.jpg');
+                transition: all 0.5s linear;
+                
+            }
+
+            .background-img-3 {
+                background-image:url("img/banner_elsord.jpg");
+                transition: all 0.5s linear;
+            }
+
+            .background-img-4 {
+                background-image: url("img/banner_dark.jpg");
+                transition: all 0.5s linear;
+            }
+
+            .background-img-5 {
+                background-image: url("img/banner_fps.jpg");
+                transition: all 0.5s linear;
+            }
+
+            .background-img-6 {
+                background-image:url("img/banner_seaof.jpg");
+                transition: all 0.5s;
+            }
+
+            .background-img-7 {
+                background-image: url("img/banner_apex.jpg");
+                transition: all 0.5s;
+            }
+
+            .background-img-8 {
+                background-image: url("img/banner_ittakestwo.jpg");
+                transition: all 0.5s;
+            }
+
+            .background-img-9 {
+                background-image: url("img/카야호.jpg");
+                transition: all 0.5s;
+            }
+
+            .background-img-10 {
+                background-image: url("img/banner_fising.jpg");
+                transition: all 0.5s;
+            }
+
+            .bck-img-area img{
                 width: 100%;
                 height: 100%;
 
@@ -172,23 +227,24 @@
             .banner-menu {
                 width: 1280px;
                 display: flex;
-                justify-content: space-between;
+                overflow: hidden;
             }
 
-            .banner-menu a {
+           .banner-move-area {
                 display: flex;
-                text-decoration: none;
-            }
+                width: 1280px;
+                transition: 0.5s;
+           }
 
             .banners {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                width: 255px;
+                min-width: 255px;
                 padding: 15px;
                 margin-right: 1px;
                 background-color: rgba( 255, 255, 255, 0.1);
-
+                cursor: pointer;
             }
 
             .banner-arrow {
@@ -202,13 +258,44 @@
             }
 
             .banners:hover {
-                background-color: rgba(255, 255, 255, 0.3);
-                transition: all 0.5s;
+                background-color: rgba( 255, 255, 255, 0.3);
+                transition: all .5s;
+            }
+
+            .banners:hover * {
+                color: #fff;
+            }
+
+            .banners-h {
+                background-color: rgba( 255, 255, 255, 0.1);
+                transition: all .5s;
+            }
+
+            .banners-a {
+                background-color: rgba( 255, 255, 255, 0.3);
+                transition: all .5s;
+            }
+
+            .banners-h div {
+                color: rgb(219, 219, 219);
+                transition: all .5s;
+            }
+
+            .banners-a div {
+                color: #fff;
+                transition: all .5s;
+            }
+
+            .banner-bottom-area:hover > .banner-arrow {
+                color: #fff;
+                opacity: 0.3;
+                transition: all .5s;
             }
 
             .banner-arrow:hover {
                 color: #fff;
-                opacity: 1;
+                opacity: 1 !important;
+                transition: all .5s;
             }
 
             .space50 {
@@ -295,12 +382,13 @@
             }
 
             .recom-post-area {
+                position: relative;
                 display: flex;
                 width: 153px;
                 height: 320px;
                 background-color: #fff;
                 flex-direction: column;
-                
+                cursor: pointer;
             }
 
             .recom-post-area:hover, .m-total-area:hover {
@@ -417,16 +505,20 @@
 
             .fa-facebook-messenger {
                 font-size: 30px;
-                position: absolute;
-                top: 5px;
-                right: 5px;
+                
                 color: #fff;
             }
 
-            .fa-facebook-messenger:hover {
+            .play-talk-area {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+            }
+
+            /* .fa-facebook-messenger:hover {
                 color: red;
                 background-color: rgb(245, 245, 245);
-            }
+            } */
 
 
             .login-area {
@@ -1350,6 +1442,7 @@
 
             .br-video-area {
                 height: 145px;
+                overflow: hidden;
             }
 
             .br-video-area img {
@@ -1603,13 +1696,59 @@
             }
 
             .tag-one:hover {
-                color: mediumturquoise !important;
+                color: #07f !important;
             }
 
             .tag-one-selected {
                 color: white;
                 background-color: black;
                 border-radius: 10px;
+            }
+
+            .hook {
+                overflow: hidden;
+            }
+
+            .play-talk-container {
+                visibility: hidden;
+                background-color: rgba( 0, 0, 0, 0.7);
+                z-index: 33;
+                position: absolute;
+                top: 33px;
+                right: -20px;
+                padding: 5px;
+                z-index: 33;
+                
+                opacity: 0;
+            }
+
+            .play-talk-container-display {
+                transition: visibility 0.3s, opacity 0.3s linear;
+                visibility: visible;
+                opacity: 1;
+            }
+
+            .play-talk-container::after {
+                border-top:0px solid transparent;
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+                border-bottom: 6px solid rgba( 0, 0, 0, 0.7);
+                top: -4px;
+                right: 28px; 
+                content:"";
+                position:absolute;
+            }
+
+            .play-talk-container a {
+                
+                display: flex;
+                color: #fff;
+                font-size: 11px;
+            }
+
+            .pt-text {
+                margin-right: 5px;
+                width: 44px;
             }
            
         </style>
@@ -1909,46 +2048,73 @@
 
         <div class="banner-area">
             <a href="">
-                <div class="background-img">
-                   
+                <div id="bg-i" class="bck-img-area background-img-1">
                 </div>
             </a>
             <div class="banner-bottom-area">
                 
-                <div class="banner-arrow fas fa-chevron-left" onclick=""></div>
+                <div class="banner-arrow fas fa-chevron-left banner-move-l" onclick=""></div>
                 <div class="banner-menu">
-                    <a href="">
-                        <div class="banners banner-1">
-                            <div class="game-name">영웅의군단</div>
-                            <div class="banner-title">10주년 쇼타임 이벤트</div>
+                    <div class="banner-move-area">
+                        <div class="banners banner-1" data-value="1">
+                            <div class="bn-inf game-name">갓 오브 워4</div>
+                            <div class="bn-inf banner-title">신규 지역 확장</div>
                         </div>
-                    </a>
-                    <a href="">
-                        <div class="banners banner-2">
-                            <div class="game-name">디스아너드3</div>
-                            <div class="banner-title">CBT로 먼저 만나보는 베데스다의 신작!</div>
+                    
+                        <div class="banners banner-2" data-value="2">
+                            <div class="bn-inf game-name">디스아너드3</div>
+                            <div class="bn-inf banner-title">CBT로 먼저 만나보는 베데스다의 신작!</div>
                         </div>
-                    </a>
-                    <a href="">
-                        <div class="banners banner-3">
-                            <div class="game-name">엘소드</div>
-                            <div class="banner-title">넥슨캐시 지급</div>
+                    
+                    
+                        <div class="banners banner-3" data-value="3">
+                            <div class="bn-inf game-name">엘소드</div>
+                            <div class="bn-inf banner-title">넥슨캐시 지급</div>
                         </div>
-                    </a>
-                    <a href="">
-                        <div class="banners banner-4">
-                            <div class="game-name">어둠의전설</div>
-                            <div class="banner-title">어둠의전설 어둠추억</div>
+                    
+                    
+                        <div class="banners banner-4 " data-value="4">
+                            <div class="bn-inf game-name">어둠의전설</div>
+                            <div class="bn-inf banner-title">어둠의전설 어둠추억</div>
                         </div>
-                    </a>
-                    <a href="">
-                        <div class="banners banner-5">
-                            <div class="game-name">카운터사이드</div>
-                            <div class="banner-title">카운터사이드x길티기어</div>
+                    
+                    
+                        <div class="banners banner-5" data-value="5">
+                            <div class="bn-inf game-name">카운터사이드</div>
+                            <div class="bn-inf banner-title">카운터사이드x길티기어</div>
                         </div>
-                    </a>
+
+
+                        <div class="banners banner-6" data-value="6">
+                            <div class="bn-inf game-name">씨 오브 씨브즈</div>
+                            <div class="bn-inf banner-title">캐리비안의 도적!!</div>
+                        </div>
+                    
+                        <div class="banners banner-7" data-value="7">
+                            <div class="bn-inf game-name">APEX</div>
+                            <div class="bn-inf banner-title">신규캐릭터 발키리 강림</div>
+                        </div>
+                    
+                    
+                        <div class="banners banner-8" data-value="8">
+                            <div class="bn-inf game-name">It Takes Two</div>
+                            <div class="bn-inf banner-title">신규 에피소드 추가</div>
+                        </div>
+                    
+                    
+                        <div class="banners banner-9 " data-value="9">
+                            <div class="bn-inf game-name">더 라스트 오브 어스 .파트2</div>
+                            <div class="bn-inf banner-title">넥스트온 독점 신작</div>
+                        </div>
+                    
+                    
+                        <div class="banners banner-10" data-value="10">
+                            <div class="bn-inf game-name">낚시2021</div>
+                            <div class="bn-inf banner-title">금요일엔 역시 낚시</div>
+                        </div> 
+                    </div>
                 </div>
-                <div class="banner-arrow fas fa-chevron-right"></div>
+                <div class="banner-arrow fas fa-chevron-right banner-move-r"></div>
                 
             </div>
         </div>
@@ -1968,10 +2134,19 @@
             <div class="recom-login-area">
                 <div class="recom-game-area">
                     
-                    <a href="">
+                    
                         <div class="recom-post-area">
-                            <div id="recom-img-1" class="recom-post-img-area">
+                            <div class="hook">
+                                <div id="recom-img-1" class="recom-post-img-area"></div>
+                            </div>
+                            <div class="play-talk-area">
                                 <div class="fab fa-facebook-messenger"></div>
+                                <div class="play-talk-container">
+                                    <a href="https://www.youtube.com/" target="_blank">
+                                        <div class="pt-text">플레이톡</div>
+                                        <div class="fas fa-external-link-alt"></div>
+                                    </a>
+                                </div>
                             </div>
                             <div class="recom-post-info-area">
                                 <div class="recom-icon">추천</div>
@@ -1979,13 +2154,20 @@
                                 <div class="why-recom-game">이벤트 진행중인</div>
                             </div>
                         </div>
-                    </a>
+                   
 
-
-                    <a href="">
                         <div class="recom-post-area">
-                            <div id="recom-img-2" class="recom-post-img-area">
+                            <div class="hook">
+                                <div id="recom-img-2" class="recom-post-img-area"></div>
+                            </div>
+                            <div class="play-talk-area">
                                 <div class="fab fa-facebook-messenger"></div>
+                                <div class="play-talk-container">
+                                    <a href="">
+                                        <div class="pt-text">플레이톡</div>
+                                        <div class="fas fa-external-link-alt"></div>
+                                    </a>
+                                </div>
                             </div>
                             <div class="recom-post-info-area">
                                 <div class="recom-icon">추천</div>
@@ -1993,13 +2175,20 @@
                                 <div class="why-recom-game">최근 게이머가 많은</div>
                             </div>
                         </div>
-                    </a>
 
 
-                    <a href="">
                         <div class="recom-post-area">
-                            <div id="recom-img-3" class="recom-post-img-area">
+                            <div class="hook">
+                                <div id="recom-img-3" class="recom-post-img-area"></div>
+                            </div>
+                            <div class="play-talk-area">
                                 <div class="fab fa-facebook-messenger"></div>
+                                <div class="play-talk-container">
+                                    <a href="">
+                                        <div class="pt-text">플레이톡</div>
+                                        <div class="fas fa-external-link-alt"></div>
+                                    </a>
+                                </div>
                             </div>
                             <div class="recom-post-info-area">
                                 <div class="recom-icon">추천</div>
@@ -2007,13 +2196,20 @@
                                 <div class="why-recom-game">오랫동안 사랑받는</div>
                             </div>
                         </div>
-                    </a>
 
 
-                    <a href="">
                         <div class="recom-post-area">
-                            <div id="recom-img-4" class="recom-post-img-area">
+                            <div class="hook">
+                                <div id="recom-img-4" class="recom-post-img-area"></div>
+                            </div>
+                            <div class="play-talk-area">
                                 <div class="fab fa-facebook-messenger"></div>
+                                <div class="play-talk-container">
+                                    <a href="">
+                                        <div class="pt-text">플레이톡</div>
+                                        <div class="fas fa-external-link-alt"></div>
+                                    </a>
+                                </div>
                             </div>
                             <div class="recom-post-info-area">
                                 <div class="recom-icon">추천</div>
@@ -2021,13 +2217,20 @@
                                 <div class="why-recom-game">오래 플레이하는</div>
                             </div>
                         </div>
-                    </a>
 
 
-                    <a href="">
                         <div class="recom-post-area">
-                            <div id="recom-img-5" class="recom-post-img-area">
+                            <div class="hook">
+                                <div id="recom-img-5" class="recom-post-img-area"></div>
+                            </div>
+                            <div class="play-talk-area">
                                 <div class="fab fa-facebook-messenger"></div>
+                                <div class="play-talk-container">
+                                    <a href="">
+                                        <div class="pt-text">플레이톡</div>
+                                        <div class="fas fa-external-link-alt"></div>
+                                    </a>
+                                </div>
                             </div>
                             <div class="recom-post-info-area">
                                 <div class="recom-icon">추천</div>
@@ -2035,7 +2238,6 @@
                                 <div class="why-recom-game">새로 오픈하는</div>
                             </div>
                         </div>
-                    </a>
                 </div>
 
                 <div class="login-area">
@@ -3209,23 +3411,7 @@
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
             crossorigin="anonymous"></script>
         <script>
-            $('.banners').hover(function(){
-                // console.log($(this).children('div'));
-                $(this).children('div').css('color', 'white');
-            }, function() {
-                $(this).children('div').css('color', 'rgb(219, 219, 219)');
-            });
-
-            $('.banners').click(function(){
-                $(this).children('div').css('color', 'rgb(219, 219, 219)');
-            });
-
-
-            //$('.recom-post-area').hover(function(){
-            //    $(this).children('.recom-img').function name(params) {
-            //        
-            //    }
-            //});
+            
             
             $('.gmae-mobile-text').click(function(){
                 var offset = $('.offset-dummy').offset();
@@ -3349,6 +3535,8 @@
                     $('html').css('height', '100%');
                     $('html').css('overflow', '');
                     $('.dimmed').css("display", "none");
+                    $('.sm-pc-main').css('display', 'block');
+                    $('.sm-m-main').css('display', 'none');
                 }
             });
 
@@ -3383,7 +3571,9 @@
 
             $(".big-recom-video-area").hover(function(){
                 $('.big-recom-video-area').css("display", "block");
+                $('.br-video-area img').css({"transform": "scale(1.2)", "transition":"all 0.5s"});
             }, function(){
+                $('.br-video-area img').css({"transform": "scale(1)", "transition":"all 0.5s"});
                 let scroll_position = $(window).scrollTop();
                 if(scroll_position != 0)
                     $('.big-recom-video-area').css("display", "none");
@@ -3423,40 +3613,84 @@
                 $('.recom-video-icon').css('display', 'block');
             });
 
-            // 이미지 확대, 축소
-            function zoomIn(event) {
-                event.target.style.transform = "scale(1.2)";
-                event.target.style.zIndex = 1;
-                event.target.style.transition = "all 0.5s";
-            }
-
-            function zoomOut(event) {
-                event.target.style.transform = "scale(1)";
-                event.target.style.zIndex = 0;
-                event.target.style.transition = "all 0.5s";
-            }
            
            //태그 선택
-           $('.tag-one').click(function(e){
-                $('.tag-area > div').removeClass('test-tag');
-                $('.tag-area > div').addClass('tag-one');
-                $(this).addClass('test-tag');
-                $(this).removeClass('tag-one');
-           });
+            $('.tag-one').click(function(e){
+                    $('.tag-area > div').removeClass('test-tag');
+                    $('.tag-area > div').addClass('tag-one');
+                    $(this).addClass('test-tag');
+                    $(this).removeClass('tag-one');
+            });
 
-           $('.all-game-icon').click(function(){
-                $('.all-game-icon').removeClass('list-checked');
-                $(this).addClass('list-checked');
-                $('.tag-area > div').removeClass('test-tag');
-                $('.first-tag').addClass('test-tag');
-                $('.first-tag').removeClass('tag-one');
-           });
 
-           $('.pc-game-post').hover(function(){
-                $(this).children(".pc-game-img-area").children("img").css({"transform": "scale(1.2)", "transition":"all 0.5s"});
-           }, function(){
-                $(this).children(".pc-game-img-area").children("img").css({"transform": "scale(1)", "transition":"all 0.5s"});
-           });
+            $('.all-game-icon').click(function(){
+                    $('.all-game-icon').removeClass('list-checked');
+                    $(this).addClass('list-checked');
+                    $('.tag-area > div').removeClass('test-tag');
+                    $('.first-tag').addClass('test-tag');
+                    $('.first-tag').removeClass('tag-one');
+            });
+
+            $('.pc-game-post').hover(function(){
+                    $(this).children(".pc-game-img-area").children("img").css({"transform": "scale(1.2)", "transition":"all 0.5s"});
+            }, function(){
+                    $(this).children(".pc-game-img-area").children("img").css({"transform": "scale(1)", "transition":"all 0.5s"});
+            });
+
+            //추천게임 호버
+            $('.recom-post-area').hover(function(event){
+                    $(this).children('.hook').children('.recom-post-img-area').css({"transform": "scale(1.2)", "transition":"all 0.5s"});
+            }, function(){
+                    $(this).children('.hook').children('.recom-post-img-area').css({"transform": "scale(1)", "transition":"all 0.5s"});
+            });
+
+            //플레이톡
+            $('.play-talk-area').hover(function(){
+                    $(this).children('.play-talk-container').addClass("play-talk-container-display");
+                    //$(this).children('.fab').css({"color": "red", "background-color": "rgb(245, 245, 245)"});
+            }, function(){
+                    $(this).children('.play-talk-container').removeClass("play-talk-container-display");
+                    //$(this).children('.fab').css({"color": "rgb(255, 255, 255)", "background-color": ""});
+            });
+
+
+            //배너 밑에 메뉴 클릭 이벤트
+            
+
+            $('.banners').click(function(){
+                $('.banners').removeClass('banners-a');
+                $('.banners').addClass('banners-h');
+                $(this).removeClass('banners-h');
+                $(this).addClass('banners-a');
+            });
+
+           
+            // 배너 화살표
+            $('.banner-move-l').click(function(){
+                $('.banner-move-area').css("transform", "translateX(0px)");
+            });
+
+            $('.banner-move-r').click(function(){
+                $('.banner-move-area').css("transform", "translateX(-1279px)");
+            });
+
+            
+            $('.banners').click(function(){
+                let banner_num = $(this).data('value');
+                $('#bg-i').removeClass();
+                $('#bg-i').addClass('bck-img-area');
+                $('.bck-img-area').addClass('background-img-'+banner_num);
+             
+                
+                // // 데이터는 클래스에 넣는게 아님
+
+                // background-img-1
+                // background-img-area 
+                // css background-image = ??
+               
+
+
+            });
 
 
         </script>
