@@ -147,7 +147,7 @@
 
             .bck-img-area {
                 height: 550px;
-
+                position: relative;
             }
 
             .bck-img-area::after {
@@ -161,54 +161,85 @@
             }
 
             .background-img-1 {
-                background-image: url('img/banner_loh.jpg');
+                background-image: url('img/카야호.jpg');
                 transition: all 0.5s linear;
             }
 
+            
+
             .background-img-2 {
+                background-image:url("img/banner_loh.jpg");
+                transition: all 0.5s linear;
+            }
+
+            .background-img-3 {
                 background-image:url('img/banner_dishored3.jpg');
                 transition: all 0.5s linear;
                 
             }
 
-            .background-img-3 {
-                background-image:url("img/banner_elsord.jpg");
-                transition: all 0.5s linear;
-            }
-
             .background-img-4 {
-                background-image: url("img/banner_dark.jpg");
-                transition: all 0.5s linear;
-            }
-
-            .background-img-5 {
-                background-image: url("img/banner_fps.jpg");
-                transition: all 0.5s linear;
-            }
-
-            .background-img-6 {
                 background-image:url("img/banner_seaof.jpg");
                 transition: all 0.5s;
             }
 
+            .background-img-5 {
+                background-image: url("img/banner_elsord.jpg");
+                transition: all 0.5s linear;
+            }
+            
+
+            .background-img-6 {
+                background-image: url("img/banner_dark.jpg");
+                transition: all 0.5s linear;
+            }
+
             .background-img-7 {
-                background-image: url("img/banner_apex.jpg");
+                background-image: url("img/banner_fps.jpg");
                 transition: all 0.5s;
             }
 
             .background-img-8 {
-                background-image: url("img/banner_ittakestwo.jpg");
+                background-image: url("img/banner_apex.jpg");
                 transition: all 0.5s;
             }
 
             .background-img-9 {
-                background-image: url("img/카야호.jpg");
+                background-image: url("img/banner_ittakestwo.jpg");
                 transition: all 0.5s;
             }
 
             .background-img-10 {
                 background-image: url("img/banner_fising.jpg");
                 transition: all 0.5s;
+            }
+
+            .elsword-update-info {
+                display: none;
+            }
+
+            .img-5-ytb {
+                position: absolute;
+                top: 80px;
+                right: 315px;
+                z-index: 1;
+            }
+
+            .updpate-elso {
+                position: absolute;
+                top: 160px;
+                left: 315px;
+            }
+
+            .updpate-elso1, .updpate-elso2 {
+                color: white;
+                font-size:50px;
+                font-weight: bold;
+                font-family: 'nexon-nanum2';
+            }
+
+            .updpate-elso2 {
+                color: red !important;
             }
 
             .bck-img-area img{
@@ -224,17 +255,29 @@
                 
             }
 
+            .banner-area a {
+                text-decoration: none;
+            }
+
             .banner-menu {
                 width: 1280px;
                 display: flex;
                 overflow: hidden;
             }
 
-           .banner-move-area {
+            .banner-move-area {
                 display: flex;
                 width: 1280px;
                 transition: 0.5s;
-           }
+            }
+
+            .banner-move-l, .banner-move-r {
+                visibility: hidden;
+            }
+
+            .banner-move-display {
+                visibility: visible;
+            }
 
             .banners {
                 display: flex;
@@ -1750,6 +1793,8 @@
                 margin-right: 5px;
                 width: 44px;
             }
+
+            
            
         </style>
     </head>
@@ -2049,6 +2094,12 @@
         <div class="banner-area">
             <a href="">
                 <div id="bg-i" class="bck-img-area background-img-1">
+                    <div class="elsword-update-info">
+                        <div class="updpate-elso"><span class="updpate-elso1">엘을 위해 존재하는</span><br><span class="updpate-elso2">수호기사</span></div>
+                        <div class="img-5-ytb">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/K8C_guyJ2oA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
                 </div>
             </a>
             <div class="banner-bottom-area">
@@ -2056,57 +2107,60 @@
                 <div class="banner-arrow fas fa-chevron-left banner-move-l" onclick=""></div>
                 <div class="banner-menu">
                     <div class="banner-move-area">
-                        <div class="banners banner-1" data-value="1">
+
+                        <div class="banners banner-1 " data-value="1">
+                            <div class="bn-inf game-name">더 라스트 오브 어스 .파트2</div>
+                            <div class="bn-inf banner-title">넥스트온 독점 신작</div>
+                        </div>
+
+
+                        <div class="banners banner-2" data-value="2">
                             <div class="bn-inf game-name">갓 오브 워4</div>
                             <div class="bn-inf banner-title">신규 지역 확장</div>
                         </div>
                     
-                        <div class="banners banner-2" data-value="2">
+                        <div class="banners banner-3" data-value="3">
                             <div class="bn-inf game-name">디스아너드3</div>
                             <div class="bn-inf banner-title">CBT로 먼저 만나보는 베데스다의 신작!</div>
                         </div>
+
+                        
+                        <div class="banners banner-4" data-value="4">
+                            <div class="bn-inf game-name">씨 오브 씨브즈</div>
+                            <div class="bn-inf banner-title">캐리비안의 도적!!</div>
+                        </div>
                     
                     
-                        <div class="banners banner-3" data-value="3">
+                        <div class="banners banner-5" data-value="5">
                             <div class="bn-inf game-name">엘소드</div>
                             <div class="bn-inf banner-title">넥슨캐시 지급</div>
                         </div>
                     
                     
-                        <div class="banners banner-4 " data-value="4">
+                        <div class="banners banner-6 " data-value="6">
                             <div class="bn-inf game-name">어둠의전설</div>
                             <div class="bn-inf banner-title">어둠의전설 어둠추억</div>
                         </div>
                     
                     
-                        <div class="banners banner-5" data-value="5">
+                        <div class="banners banner-7" data-value="7">
                             <div class="bn-inf game-name">카운터사이드</div>
                             <div class="bn-inf banner-title">카운터사이드x길티기어</div>
                         </div>
 
 
-                        <div class="banners banner-6" data-value="6">
-                            <div class="bn-inf game-name">씨 오브 씨브즈</div>
-                            <div class="bn-inf banner-title">캐리비안의 도적!!</div>
-                        </div>
-                    
-                        <div class="banners banner-7" data-value="7">
-                            <div class="bn-inf game-name">APEX</div>
-                            <div class="bn-inf banner-title">신규캐릭터 발키리 강림</div>
-                        </div>
-                    
                     
                         <div class="banners banner-8" data-value="8">
+                            <div class="bn-inf game-name">APEX</div>
+                            <div class="bn-inf banner-title">신규캐릭터 코스틱 등장</div>
+                        </div>
+                    
+                    
+                        <div class="banners banner-9" data-value="9">
                             <div class="bn-inf game-name">It Takes Two</div>
                             <div class="bn-inf banner-title">신규 에피소드 추가</div>
                         </div>
-                    
-                    
-                        <div class="banners banner-9 " data-value="9">
-                            <div class="bn-inf game-name">더 라스트 오브 어스 .파트2</div>
-                            <div class="bn-inf banner-title">넥스트온 독점 신작</div>
-                        </div>
-                    
+                
                     
                         <div class="banners banner-10" data-value="10">
                             <div class="bn-inf game-name">낚시2021</div>
@@ -3655,8 +3709,7 @@
 
 
             //배너 밑에 메뉴 클릭 이벤트
-            
-
+            $('.banner-1').addClass('banners-a');
             $('.banners').click(function(){
                 $('.banners').removeClass('banners-a');
                 $('.banners').addClass('banners-h');
@@ -3664,33 +3717,82 @@
                 $(this).addClass('banners-a');
             });
 
-           
+        
             // 배너 화살표
+            $('.banner-move-r').addClass('banner-move-display'); // 기본 화면에서 오른쪽 디스플레이 처리
+
             $('.banner-move-l').click(function(){
                 $('.banner-move-area').css("transform", "translateX(0px)");
+                $('.banner-move-r').addClass('banner-move-display');
+                $('.banner-move-l').removeClass('banner-move-display');
             });
 
             $('.banner-move-r').click(function(){
                 $('.banner-move-area').css("transform", "translateX(-1279px)");
+                $('.banner-move-l').addClass('banner-move-display');
+                $('.banner-move-r').removeClass('banner-move-display');
             });
 
-            
+
+            // 하단 배너 클릭 시 배너 이미지 변경 이벤트
+            let banner_value = 1; // 슬라이드 자동 넘김용 위치 표시 변수
             $('.banners').click(function(){
                 let banner_num = $(this).data('value');
+                banner_value = banner_num;
                 $('#bg-i').removeClass();
                 $('#bg-i').addClass('bck-img-area');
                 $('.bck-img-area').addClass('background-img-'+banner_num);
-             
-                
-                // // 데이터는 클래스에 넣는게 아님
-
-                // background-img-1
-                // background-img-area 
-                // css background-image = ??
-               
-
-
+                // if(banner_num == 5) { // 엘소드 유튜브 디스플레이 속성
+                //     $('.elsword-update-info').css('display', 'block');
+                // } else {
+                //     $('.elsword-update-info').css('display', 'none');
+                // }
             });
+
+            //배너 호버 시 setInterval의 동작이 중단됨
+            let stop_val = true;
+            $('.banners').hover(function(){
+                stop_val = false;
+            }, function(){
+                stop_val = true;
+            });
+
+
+            // 배너 자동으로 3초마다 넘기기
+            function bannerAutoMove() {
+                if(stop_val) {
+                    if(banner_value >= 6) {
+                        $('.banner-move-area').css("transform", "translateX(-1279px)");
+                        $('.banner-move-l').addClass('banner-move-display');
+                        $('.banner-move-r').removeClass('banner-move-display');
+                    }
+                    if(banner_value <= 5) {
+                        $('.banner-move-area').css("transform", "translateX(0px)");
+                        $('.banner-move-l').removeClass('banner-move-display'); 
+                        $('.banner-move-r').addClass('banner-move-display');
+                    }
+
+                    $('.banners').removeClass('banners-a');
+                    $('.banners').addClass('banners-h');
+                    $('.banner-'+banner_value).removeClass('banners-h');
+                    $('.banner-'+banner_value).addClass('banners-a');
+                    $('#bg-i').removeClass();
+                    $('#bg-i').addClass('bck-img-area');
+                    $('.bck-img-area').addClass('background-img-'+banner_value);
+
+                    banner_value++;
+                    if(banner_value == 11)
+                        banner_value = 1;
+                }
+                setTimeout(bannerAutoMove, 3000);
+            }
+            
+            bannerAutoMove();
+            
+
+
+
+           
 
 
         </script>
