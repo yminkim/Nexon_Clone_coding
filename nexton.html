@@ -288,6 +288,7 @@
                 margin-right: 1px;
                 background-color: rgba( 255, 255, 255, 0.1);
                 cursor: pointer;
+                position: relative;
             }
 
             .banner-arrow {
@@ -547,8 +548,11 @@
             }
 
             .fa-facebook-messenger {
-                font-size: 30px;
-                
+                font-size: 21px;
+                position: absolute;
+                left: 1px;
+                top: -1px;
+                padding: 5px;
                 color: #fff;
             }
 
@@ -557,11 +561,6 @@
                 top: 5px;
                 right: 5px;
             }
-
-            /* .fa-facebook-messenger:hover {
-                color: red;
-                background-color: rgb(245, 245, 245);
-            } */
 
 
             .login-area {
@@ -1757,7 +1756,7 @@
                 background-color: rgba( 0, 0, 0, 0.7);
                 z-index: 33;
                 position: absolute;
-                top: 33px;
+                top: 34px;
                 right: -20px;
                 padding: 5px;
                 z-index: 33;
@@ -1794,7 +1793,48 @@
                 width: 44px;
             }
 
+
+            /*미니 배너의 프로그레스바*/
+            .progress-bar {
+                position: absolute;
+                background-color: #07f;
+                height: 80px;
+                top: 0;
+                left: 0;
+                -webkit-animation: progress-bar 3s ease-out;
+            }
+
+            @-webkit-keyframes progress-bar {
+                0%  { 
+                    width: 0px;
+                } 
+                100% { 
+                    width: 100%;
+                }  
+            }
+
+            .bn-inf {
+                z-index: 321;
+            }
+
+            .recom-icon-area {
+                width: 30px;
+                height: 30px;
+                border-radius: 20px;
+                border: 2px solid white;
+            }
             
+            .recom-icon-area-cc {
+                background-color: white;
+                transition: all 0.3s;
+            }
+
+            .fa-facebook-messenger-cc {
+                background: linear-gradient(to bottom, #9553d3, #082aeb);
+                -webkit-background-clip: text;
+                color: transparent;
+                transition: all 0.3s;
+            }
            
         </style>
     </head>
@@ -1833,7 +1873,7 @@
                 </div>
                 <div class="md-ncc-info">
                     <div class="md-ncc">NCC<span>βeta</span></div>
-                    <div class="md-ncc-des">본 콘텐츠는 YouTube 영상 중 넥슨 콘텐츠 추천 시스템에 의해 자동으로 선정되어 노출 되었습니다.</div>
+                    <div class="md-ncc-des">본 콘텐츠는 YouTube 영상 중 넥스트온 콘텐츠 추천 시스템에 의해 자동으로 선정되어 노출 되었습니다.</div>
                 </div>
                 <div class="youtube-r">영상 콘텐츠에 대한 저작권 및 책임은 YouTube 커뮤니티 가이드에 따릅니다.</div>
             </div>
@@ -2019,7 +2059,7 @@
                         <div class="c1 sm-footer-menu-item">
                             <a href="">
                                 <div class="sm-fmi-icon fas fa-coins"></div>
-                                <div>넥슨캐시</div>
+                                <div>넥스트온캐시</div>
                             </a>
                         </div>
 
@@ -2040,7 +2080,7 @@
                         <div class="c2 sm-footer-menu-item">
                             <a href="">
                                 <div class="sm-fmi-icon fas fa-plug"></div>
-                                <div>넥슨플러그</div>
+                                <div>넥스트온플러그</div>
                             </a>
                         </div>
 
@@ -2054,14 +2094,14 @@
                         <div class="c3 sm-footer-menu-item">
                             <a href="">
                                 <div class="sm-fmi-icon fas fa-calendar-check"></div>
-                                <div>넥슨달력</div>
+                                <div>넥스트온달력</div>
                             </a>
                         </div>
 
                         <div class="c3 sm-footer-menu-item">
                             <a href="">
                                 <div class="sm-fmi-icon fas fa-play-circle"></div>
-                                <div>넥슨플레이</div>
+                                <div>넥스트온플레이</div>
                             </a>
                         </div>
                     </div>
@@ -2109,7 +2149,7 @@
                     <div class="banner-move-area">
 
                         <div class="banners banner-1 " data-value="1">
-                            <div class="bn-inf game-name">더 라스트 오브 어스 .파트2</div>
+                            <div class="bn-inf game-name">더 라스트 오브 어스 파트 2</div>
                             <div class="bn-inf banner-title">넥스트온 독점 신작</div>
                         </div>
 
@@ -2127,13 +2167,13 @@
                         
                         <div class="banners banner-4" data-value="4">
                             <div class="bn-inf game-name">씨 오브 씨브즈</div>
-                            <div class="bn-inf banner-title">캐리비안의 도적!!</div>
+                            <div class="bn-inf banner-title">수상항 괴물체 목격</div>
                         </div>
                     
                     
                         <div class="banners banner-5" data-value="5">
                             <div class="bn-inf game-name">엘소드</div>
-                            <div class="bn-inf banner-title">넥슨캐시 지급</div>
+                            <div class="bn-inf banner-title">넥스트온 캐시 지급</div>
                         </div>
                     
                     
@@ -2145,20 +2185,20 @@
                     
                         <div class="banners banner-7" data-value="7">
                             <div class="bn-inf game-name">카운터사이드</div>
-                            <div class="bn-inf banner-title">카운터사이드x길티기어</div>
+                            <div class="bn-inf banner-title">카운터사이드x복면가왕 콜라보</div>
                         </div>
 
 
                     
                         <div class="banners banner-8" data-value="8">
-                            <div class="bn-inf game-name">APEX</div>
+                            <div class="bn-inf game-name">APEX 온라인</div>
                             <div class="bn-inf banner-title">신규캐릭터 코스틱 등장</div>
                         </div>
                     
                     
                         <div class="banners banner-9" data-value="9">
-                            <div class="bn-inf game-name">It Takes Two</div>
-                            <div class="bn-inf banner-title">신규 에피소드 추가</div>
+                            <div class="bn-inf game-name">월드 오브 워크래프트</div>
+                            <div class="bn-inf banner-title">파괴의 신 강림</div>
                         </div>
                 
                     
@@ -2194,7 +2234,9 @@
                                 <div id="recom-img-1" class="recom-post-img-area"></div>
                             </div>
                             <div class="play-talk-area">
-                                <div class="fab fa-facebook-messenger"></div>
+                                <div class="recom-icon-area">
+                                    <div class="fab fa-facebook-messenger"></div>
+                                </div>
                                 <div class="play-talk-container">
                                     <a href="https://www.youtube.com/" target="_blank">
                                         <div class="pt-text">플레이톡</div>
@@ -2215,7 +2257,9 @@
                                 <div id="recom-img-2" class="recom-post-img-area"></div>
                             </div>
                             <div class="play-talk-area">
-                                <div class="fab fa-facebook-messenger"></div>
+                                <div class="recom-icon-area">
+                                    <div class="fab fa-facebook-messenger"></div>
+                                </div>
                                 <div class="play-talk-container">
                                     <a href="">
                                         <div class="pt-text">플레이톡</div>
@@ -2236,7 +2280,9 @@
                                 <div id="recom-img-3" class="recom-post-img-area"></div>
                             </div>
                             <div class="play-talk-area">
-                                <div class="fab fa-facebook-messenger"></div>
+                                <div class="recom-icon-area">
+                                    <div class="fab fa-facebook-messenger"></div>
+                                </div>
                                 <div class="play-talk-container">
                                     <a href="">
                                         <div class="pt-text">플레이톡</div>
@@ -2257,7 +2303,9 @@
                                 <div id="recom-img-4" class="recom-post-img-area"></div>
                             </div>
                             <div class="play-talk-area">
-                                <div class="fab fa-facebook-messenger"></div>
+                                <div class="recom-icon-area">
+                                    <div class="fab fa-facebook-messenger"></div>
+                                </div>
                                 <div class="play-talk-container">
                                     <a href="">
                                         <div class="pt-text">플레이톡</div>
@@ -2278,7 +2326,9 @@
                                 <div id="recom-img-5" class="recom-post-img-area"></div>
                             </div>
                             <div class="play-talk-area">
-                                <div class="fab fa-facebook-messenger"></div>
+                                <div class="recom-icon-area">
+                                    <div class="fab fa-facebook-messenger"></div>
+                                </div>
                                 <div class="play-talk-container">
                                     <a href="">
                                         <div class="pt-text">플레이톡</div>
@@ -2384,7 +2434,28 @@
 
                 <div class="pc-game-post-area">
 
-                    
+                    <div class="pc-game-post" onclick="link_game();">
+                        <div class="pc-game-post">
+                            <div class="pc-game-img-area">
+                                <img src="img/ittakes2.jpg" alt="" onmouseover="zoomIn(event)" onmouseout="zoomOut(event)">
+                            </div>
+                            <div class="pc-game-info-area">
+                                <div class="pc-game-title-a">
+                                    <div class="pc-game-name">It Takes Two</div>
+                                    <div class="sns-link-icon">
+                                        <a href="">
+                                            <div class="link-icon fab fa-youtube"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="pc-game-discription">갈라선 부부의 액션 어드벤처</div>
+                                <div class="pc-game-platform">
+                                    <div class="platform-icon fas fa-desktop"></div>
+                                    <div class="genre">FPS</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="pc-game-post">
                         <div class="pc-game-post">
@@ -2423,10 +2494,10 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="pc-game-discription">갓겜</div>
+                                <div class="pc-game-discription">코르보의 절망</div>
                                 <div class="pc-game-platform">
                                     <div class="platform-icon fas fa-desktop"></div>
-                                    <div class="genre">MMORPG</div>
+                                    <div class="genre">Adventure</div>
                                 </div>
                             </div>
                         </div>
@@ -2435,21 +2506,21 @@
                     <div class="pc-game-post" onclick="link_game();">
                         <div class="pc-game-post">
                             <div class="pc-game-img-area">
-                                <img src="img/귀혼.jpg" alt="" onmouseover="zoomIn(event)" onmouseout="zoomOut(event)">
+                                <img src="img/okay.png" alt="" onmouseover="zoomIn(event)" onmouseout="zoomOut(event)">
                             </div>
                             <div class="pc-game-info-area">
                                 <div class="pc-game-title-a">
-                                    <div class="pc-game-name">귀혼</div>
+                                    <div class="pc-game-name">APEX 온라인</div>
                                     <div class="sns-link-icon">
                                         <a href="">
                                             <div class="link-icon fab fa-youtube"></div>
                                         </a>
                                     </div>
                                 </div>
-                                <div class="pc-game-discription">마을에 요괴가 들었어요!</div>
+                                <div class="pc-game-discription">오케이? 옥테인!</div>
                                 <div class="pc-game-platform">
                                     <div class="platform-icon fas fa-desktop"></div>
-                                    <div class="genre">MMORPG</div>
+                                    <div class="genre">FPS</div>
                                 </div>
                             </div>
                         </div>
@@ -2458,21 +2529,21 @@
                     <div class="pc-game-post" onclick="link_game();">
                         <div class="pc-game-post">
                             <div class="pc-game-img-area">
-                                <img src="img/귀혼.jpg" alt="" onmouseover="zoomIn(event)" onmouseout="zoomOut(event)">
+                                <img src="img/seaofjack.jpg" alt="" onmouseover="zoomIn(event)" onmouseout="zoomOut(event)">
                             </div>
                             <div class="pc-game-info-area">
                                 <div class="pc-game-title-a">
-                                    <div class="pc-game-name">귀혼</div>
+                                    <div class="pc-game-name">씨 오브 씨브즈</div>
                                     <div class="sns-link-icon">
                                         <a href="">
                                             <div class="link-icon fab fa-youtube"></div>
                                         </a>
                                     </div>
                                 </div>
-                                <div class="pc-game-discription">마을에 요괴가 들었어요!</div>
+                                <div class="pc-game-discription">전설의 귀환</div>
                                 <div class="pc-game-platform">
                                     <div class="platform-icon fas fa-desktop"></div>
-                                    <div class="genre">MMORPG</div>
+                                    <div class="genre">Adventure FPS</div>
                                 </div>
                             </div>
                         </div>
@@ -2481,32 +2552,140 @@
                     <div class="pc-game-post" onclick="link_game();">
                         <div class="pc-game-post">
                             <div class="pc-game-img-area">
-                                <img src="img/귀혼.jpg" alt="" onmouseover="zoomIn(event)" onmouseout="zoomOut(event)">
+                                <img src="img/godofwar.jpeg" alt="" onmouseover="zoomIn(event)" onmouseout="zoomOut(event)">
                             </div>
                             <div class="pc-game-info-area">
                                 <div class="pc-game-title-a">
-                                    <div class="pc-game-name">귀혼</div>
+                                    <div class="pc-game-name">갓 오브 워</div>
                                     <div class="sns-link-icon">
                                         <a href="">
                                             <div class="link-icon fab fa-youtube"></div>
                                         </a>
                                     </div>
                                 </div>
-                                <div class="pc-game-discription">마을에 요괴가 들었어요!</div>
+                                <div class="pc-game-discription">번개의 신을 막아라!</div>
                                 <div class="pc-game-platform">
                                     <div class="platform-icon fas fa-desktop"></div>
-                                    <div class="genre">MMORPG</div>
+                                    <div class="genre">Adventure</div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    
+                    <div class="pc-game-post" onclick="link_game();">
+                        <div class="pc-game-post">
+                            <div class="pc-game-img-area">
+                                <img src="img/l4d2.png" alt="" onmouseover="zoomIn(event)" onmouseout="zoomOut(event)">
+                            </div>
+                            <div class="pc-game-info-area">
+                                <div class="pc-game-title-a">
+                                    <div class="pc-game-name">레프트4데드 2</div>
+                                    <div class="sns-link-icon">
+                                        <a href="">
+                                            <div class="link-icon fab fa-youtube"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="pc-game-discription">디스토피아의 전말</div>
+                                <div class="pc-game-platform">
+                                    <div class="platform-icon fas fa-desktop"></div>
+                                    <div class="genre">Adventure</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-
+                    <div class="pc-game-post" onclick="link_game();">
+                        <div class="pc-game-post">
+                            <div class="pc-game-img-area">
+                                <img src="img/star2.jpg" alt="" onmouseover="zoomIn(event)" onmouseout="zoomOut(event)">
+                            </div>
+                            <div class="pc-game-info-area">
+                                <div class="pc-game-title-a">
+                                    <div class="pc-game-name">스타크래프트2: Remaster</div>
+                                    <div class="sns-link-icon">
+                                        <a href="">
+                                            <div class="link-icon fab fa-youtube"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="pc-game-discription">또 다시 등장한 전설</div>
+                                <div class="pc-game-platform">
+                                    <div class="platform-icon fas fa-desktop"></div>
+                                    <div class="genre">Adventure</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     
+                    <div class="pc-game-post" onclick="link_game();">
+                        <div class="pc-game-post">
+                            <div class="pc-game-img-area">
+                                <img src="img/lou4.png" alt="" onmouseover="zoomIn(event)" onmouseout="zoomOut(event)">
+                            </div>
+                            <div class="pc-game-info-area">
+                                <div class="pc-game-title-a">
+                                    <div class="pc-game-name">더 라스트 오브 어스 파트 2</div>
+                                    <div class="sns-link-icon">
+                                        <a href="">
+                                            <div class="link-icon fab fa-youtube"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="pc-game-discription">종말을 막기위한 전쟁</div>
+                                <div class="pc-game-platform">
+                                    <div class="platform-icon fas fa-desktop"></div>
+                                    <div class="genre">Adventure</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="pc-game-post" onclick="link_game();">
+                        <div class="pc-game-post">
+                            <div class="pc-game-img-area">
+                                <img src="img/juny.png" alt="" onmouseover="zoomIn(event)" onmouseout="zoomOut(event)">
+                            </div>
+                            <div class="pc-game-info-area">
+                                <div class="pc-game-title-a">
+                                    <div class="pc-game-name">저니</div>
+                                    <div class="sns-link-icon">
+                                        <a href="">
+                                            <div class="link-icon fab fa-youtube"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="pc-game-discription">끝없는 사막의 모험</div>
+                                <div class="pc-game-platform">
+                                    <div class="platform-icon fas fa-desktop"></div>
+                                    <div class="genre">캐주얼</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     
+                    <div class="pc-game-post" onclick="link_game();">
+                        <div class="pc-game-post">
+                            <div class="pc-game-img-area">
+                                <img src="img/payday2.png" alt="" onmouseover="zoomIn(event)" onmouseout="zoomOut(event)">
+                            </div>
+                            <div class="pc-game-info-area">
+                                <div class="pc-game-title-a">
+                                    <div class="pc-game-name">페이데이3</div>
+                                    <div class="sns-link-icon">
+                                        <a href="">
+                                            <div class="link-icon fab fa-youtube"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="pc-game-discription">세계 제일의 은행을 털어라</div>
+                                <div class="pc-game-platform">
+                                    <div class="platform-icon fas fa-desktop"></div>
+                                    <div class="genre">FPS</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     
 
@@ -2555,12 +2734,12 @@
                         <div class="mobile-game-post-area2" >
                             <div class="m-total-area">
                                 <div class="mobile-game-post-img-area">
-                                    <img src="img/mloh.jpg" alt="">
+                                    <img src="img/loh2.jpg" alt="">
                                 </div>
 
                                 <div class="mobile-game-post-info-area">
                                     <div class="m-game-info-top-area">
-                                        <div class="m-game-name">영웅의군단</div>
+                                        <div class="m-game-name">영웅의군단2</div>
                                         <a href="https://namu.wiki/w/%EC%98%81%EC%9B%85%EC%9D%98%20%EA%B5%B0%EB%8B%A8" target='_blank' class="test fas fa-mug-hot"></a>
                                     </div>
                                     <div class="m-game-genre">RPG</div>
@@ -2606,7 +2785,7 @@
                                         <div class="m-game-name">배틀필드1M</div>
                                         <!--<a href="" class="fas fa-mug-hot"></a>-->
                                     </div>
-                                    <div class="m-game-genre">RPG</div>
+                                    <div class="m-game-genre">FPS</div>
                                     <div class="m-platform">
                                         <img src="img/aplogo.png" alt="">
                                     </div>
@@ -2626,7 +2805,7 @@
                                     <div class="m-game-info-top-area">
                                         <div class="m-game-name">THE LAST OF US. PART3</div>
                                     </div>
-                                    <div class="m-game-genre">RPG</div>
+                                    <div class="m-game-genre">어드벤처</div>
                                     <div class="m-platform">
                                         <img src="img/aplogo.png" alt="">
                                     </div>
@@ -2647,7 +2826,7 @@
                                         <div class="m-game-name">낚시2021</div>
                                         <!--<a href="" class="fas fa-mug-hot"></a>-->
                                     </div>
-                                    <div class="m-game-genre">RPG</div>
+                                    <div class="m-game-genre">어드벤처</div>
                                     <div class="m-platform">
                                         <img src="img/aplogo.png" alt="">
                                     </div>
@@ -2660,12 +2839,12 @@
                         <div class="mobile-game-post-area2" onclick="link_game();">
                             <div class="m-total-area">
                                 <div class="mobile-game-post-img-area">
-                                    <img src="img/mloh.jpg" alt="">
+                                    <img src="img/zelda.jpg" alt="">
                                 </div>
 
                                 <div class="mobile-game-post-info-area">
                                     <div class="m-game-info-top-area">
-                                        <div class="m-game-name">영웅의군단</div>
+                                        <div class="m-game-name">젤다의 전설 모바일</div>
                                         <!--<a href="" class="fas fa-mug-hot"></a>-->
                                     </div>
                                     <div class="m-game-genre">RPG</div>
@@ -2682,15 +2861,15 @@
                         <div class="mobile-game-post-area2" onclick="link_game();">
                             <div class="m-total-area">
                                 <div class="mobile-game-post-img-area">
-                                    <img src="img/starcraft.jpg" alt="">
+                                    <img src="img/madu.jpg" alt="">
                                 </div>
 
                                 <div class="mobile-game-post-info-area">
                                     <div class="m-game-info-top-area">
-                                        <div class="m-game-name">스타크래프트M</div>
+                                        <div class="m-game-name">마비노기 듀얼</div>
                                         <!--<a href="" class="fas fa-mug-hot"></a>-->
                                     </div>
-                                    <div class="m-game-genre">RTS</div>
+                                    <div class="m-game-genre">TCG</div>
                                     <div class="m-platform">
                                         <img src="img/aplogo.png" alt="">
                                     </div>
@@ -2701,12 +2880,12 @@
                         <div class="mobile-game-post-area2" onclick="link_game();">
                             <div class="m-total-area">
                                 <div class="mobile-game-post-img-area">
-                                    <img src="img/battle1.jpg" alt="">
+                                    <img src="img/overwatch.jpg" alt="">
                                 </div>
 
                                 <div class="mobile-game-post-info-area">
                                     <div class="m-game-info-top-area">
-                                        <div class="m-game-name">배틀필드1M</div>
+                                        <div class="m-game-name">오버워치3</div>
                                         <!--<a href="" class="fas fa-mug-hot"></a>-->
                                     </div>
                                     <div class="m-game-genre">RPG</div>
@@ -2722,12 +2901,54 @@
                         <div class="mobile-game-post-area2" onclick="link_game();">
                             <div class="m-total-area">
                                 <div class="mobile-game-post-img-area">
-                                    <img src="img/lou3.jpg" alt="">
+                                    <img src="img/venom.jpg" alt="">
                                 </div>
 
                                 <div class="mobile-game-post-info-area">
                                     <div class="m-game-info-top-area">
-                                        <div class="m-game-name">THE LAST OF US. PART3</div>
+                                        <div class="m-game-name">Venom:DarkCity</div>
+                                        <!--<a href="" class="fas fa-mug-hot"></a>-->
+                                    </div>
+                                    <div class="m-game-genre">액션</div>
+                                    <div class="m-platform">
+                                        <img src="img/aplogo.png" alt="">
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+
+                        <div class="mobile-game-post-area2" onclick="link_game();">
+                            <div class="m-total-area">
+                                <div class="mobile-game-post-img-area">
+                                    <img src="img/horaizon.jpg" alt="">
+                                </div>
+
+                                <div class="mobile-game-post-info-area">
+                                    <div class="m-game-info-top-area">
+                                        <div class="m-game-name">Horizon Zero Dawn</div>
+                                        <!--<a href="" class="fas fa-mug-hot"></a>-->
+                                    </div>
+                                    <div class="m-game-genre">어드벤처</div>
+                                    <div class="m-platform">
+                                        <img src="img/aplogo.png" alt="">
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+
+                        <div class="mobile-game-post-area2" onclick="link_game();">
+                            <div class="m-total-area">
+                                <div class="mobile-game-post-img-area">
+                                    <img src="img/theforest.jpg" alt="">
+                                </div>
+
+                                <div class="mobile-game-post-info-area">
+                                    <div class="m-game-info-top-area">
+                                        <div class="m-game-name">더 포레스트2</div>
                                         <!--<a href="" class="fas fa-mug-hot"></a>-->
                                     </div>
                                     <div class="m-game-genre">RPG</div>
@@ -2743,15 +2964,15 @@
                         <div class="mobile-game-post-area2" onclick="link_game();">
                             <div class="m-total-area">
                                 <div class="mobile-game-post-img-area">
-                                    <img src="img/FISSING.jpg" alt="">
+                                    <img src="img/ufc.png" alt="">
                                 </div>
 
                                 <div class="mobile-game-post-info-area">
                                     <div class="m-game-info-top-area">
-                                        <div class="m-game-name">낚시2021</div>
+                                        <div class="m-game-name">UFC4</div>
                                         <!--<a href="" class="fas fa-mug-hot"></a>-->
                                     </div>
-                                    <div class="m-game-genre">RPG</div>
+                                    <div class="m-game-genre">Action</div>
                                     <div class="m-platform">
                                         <img src="img/aplogo.png" alt="">
                                     </div>
@@ -2764,15 +2985,15 @@
                         <div class="mobile-game-post-area2" onclick="link_game();">
                             <div class="m-total-area">
                                 <div class="mobile-game-post-img-area">
-                                    <img src="img/lou3.jpg" alt="">
+                                    <img src="img/birds.jpg" alt="">
                                 </div>
 
                                 <div class="mobile-game-post-info-area">
                                     <div class="m-game-info-top-area">
-                                        <div class="m-game-name">THE LAST OF US. PART3</div>
+                                        <div class="m-game-name">카인드버드</div>
                                         <!--<a href="" class="fas fa-mug-hot"></a>-->
                                     </div>
-                                    <div class="m-game-genre">RPG</div>
+                                    <div class="m-game-genre">캐주얼</div>
                                     <div class="m-platform">
                                         <img src="img/aplogo.png" alt="">
                                     </div>
@@ -2782,131 +3003,7 @@
                             </div>
                         </div>
 
-                        <div class="mobile-game-post-area2" onclick="link_game();">
-                            <div class="m-total-area">
-                                <div class="mobile-game-post-img-area">
-                                    <img src="img/FISSING.jpg" alt="">
-                                </div>
-
-                                <div class="mobile-game-post-info-area">
-                                    <div class="m-game-info-top-area">
-                                        <div class="m-game-name">낚시2021</div>
-                                        <!--<a href="" class="fas fa-mug-hot"></a>-->
-                                    </div>
-                                    <div class="m-game-genre">RPG</div>
-                                    <div class="m-platform">
-                                        <img src="img/aplogo.png" alt="">
-                                    </div>
-                                </div>
-
-                                
-                            </div>
-                        </div>
-
-                        <div class="mobile-game-post-area2" onclick="link_game();">
-                            <div class="m-total-area">
-                                <div class="mobile-game-post-img-area">
-                                    <img src="img/FISSING.jpg" alt="">
-                                </div>
-
-                                <div class="mobile-game-post-info-area">
-                                    <div class="m-game-info-top-area">
-                                        <div class="m-game-name">낚시2021</div>
-                                        <!--<a href="" class="fas fa-mug-hot"></a>-->
-                                    </div>
-                                    <div class="m-game-genre">RPG</div>
-                                    <div class="m-platform">
-                                        <img src="img/aplogo.png" alt="">
-                                    </div>
-                                </div>
-
-                                
-                            </div>
-                        </div>
-
-                        <div class="mobile-game-post-area2" onclick="link_game();">
-                            <div class="m-total-area">
-                                <div class="mobile-game-post-img-area">
-                                    <img src="img/FISSING.jpg" alt="">
-                                </div>
-
-                                <div class="mobile-game-post-info-area">
-                                    <div class="m-game-info-top-area">
-                                        <div class="m-game-name">낚시2021</div>
-                                        <!--<a href="" class="fas fa-mug-hot"></a>-->
-                                    </div>
-                                    <div class="m-game-genre">RPG</div>
-                                    <div class="m-platform">
-                                        <img src="img/aplogo.png" alt="">
-                                    </div>
-                                </div>
-
-                                
-                            </div>
-                        </div>
-
-                        <div class="mobile-game-post-area2" onclick="link_game();">
-                            <div class="m-total-area">
-                                <div class="mobile-game-post-img-area">
-                                    <img src="img/FISSING.jpg" alt="">
-                                </div>
-
-                                <div class="mobile-game-post-info-area">
-                                    <div class="m-game-info-top-area">
-                                        <div class="m-game-name">낚시2021</div>
-                                        <!--<a href="" class="fas fa-mug-hot"></a>-->
-                                    </div>
-                                    <div class="m-game-genre">RPG</div>
-                                    <div class="m-platform">
-                                        <img src="img/aplogo.png" alt="">
-                                    </div>
-                                </div>
-
-                                
-                            </div>
-                        </div>
-
-                        <div class="mobile-game-post-area2" onclick="link_game();">
-                            <div class="m-total-area">
-                                <div class="mobile-game-post-img-area">
-                                    <img src="img/FISSING.jpg" alt="">
-                                </div>
-
-                                <div class="mobile-game-post-info-area">
-                                    <div class="m-game-info-top-area">
-                                        <div class="m-game-name">낚시2021</div>
-                                        <!--<a href="" class="fas fa-mug-hot"></a>-->
-                                    </div>
-                                    <div class="m-game-genre">RPG</div>
-                                    <div class="m-platform">
-                                        <img src="img/aplogo.png" alt="">
-                                    </div>
-                                </div>
-
-                                
-                            </div>
-                        </div>
-
-                        <div class="mobile-game-post-area2" onclick="link_game();">
-                            <div class="m-total-area">
-                                <div class="mobile-game-post-img-area">
-                                    <img src="img/FISSING.jpg" alt="">
-                                </div>
-
-                                <div class="mobile-game-post-info-area">
-                                    <div class="m-game-info-top-area">
-                                        <div class="m-game-name">낚시2021</div>
-                                        <!--<a href="" class="fas fa-mug-hot"></a>-->
-                                    </div>
-                                    <div class="m-game-genre">RPG</div>
-                                    <div class="m-platform">
-                                        <img src="img/aplogo.png" alt="">
-                                    </div>
-                                </div>
-
-                                
-                            </div>
-                        </div>
+                    
 
                     
 
@@ -3422,9 +3519,9 @@
                             <a href="">회사소개</a><div class="line"></div>
                             <a href="">채용안내</a><div class="line"></div>
                             <a href="">윤리경영</a><div class="line"></div>
-                            <a href="">LEVEL UP(넥슨폰트)</a><div class="line"></div>
+                            <a href="">LEVEL UP(넥스트온폰트)</a><div class="line"></div>
                             <a href="">광고문의</a><div class="line"></div>
-                            <a href="">넥슨PC방</a>
+                            <a href="">넥스트온PC방</a>
                         </div>
                     </div>
                     <div class="global-web">
@@ -3701,10 +3798,13 @@
             //플레이톡
             $('.play-talk-area').hover(function(){
                     $(this).children('.play-talk-container').addClass("play-talk-container-display");
-                    //$(this).children('.fab').css({"color": "red", "background-color": "rgb(245, 245, 245)"});
+                    $(this).children('.recom-icon-area').children('.fa-facebook-messenger').addClass('fa-facebook-messenger-cc');
+                    $(this).children('.recom-icon-area').addClass('recom-icon-area-cc');
             }, function(){
                     $(this).children('.play-talk-container').removeClass("play-talk-container-display");
-                    //$(this).children('.fab').css({"color": "rgb(255, 255, 255)", "background-color": ""});
+                    $(this).children('.recom-icon-area').children('.fa-facebook-messenger').removeClass('fa-facebook-messenger-cc');
+                    $(this).children('.recom-icon-area').removeClass('recom-icon-area-cc');
+                    
             });
 
 
@@ -3747,31 +3847,28 @@
                 // } else {
                 //     $('.elsword-update-info').css('display', 'none');
                 // }
+                
+                
             });
 
-            //배너 호버 시 setInterval의 동작이 중단됨
             let stop_val = true;
-            $('.banners').hover(function(){
-                stop_val = false;
-            }, function(){
-                stop_val = true;
-            });
+            let banner_auto_move = null;
 
-
-            // 배너 자동으로 3초마다 넘기기
             function bannerAutoMove() {
-                if(stop_val) {
+                console.log(stop_val);
+                    // 배너 6~10 일 때 배너 페이지, 화살표 출력
                     if(banner_value >= 6) {
                         $('.banner-move-area').css("transform", "translateX(-1279px)");
                         $('.banner-move-l').addClass('banner-move-display');
                         $('.banner-move-r').removeClass('banner-move-display');
                     }
-                    if(banner_value <= 5) {
+                    // 배너 1~5 일 때 배너 페이지, 화살표 출력
+                    else if(banner_value <= 5) {
                         $('.banner-move-area').css("transform", "translateX(0px)");
                         $('.banner-move-l').removeClass('banner-move-display'); 
                         $('.banner-move-r').addClass('banner-move-display');
                     }
-
+                    //하단 배너 하이라이트
                     $('.banners').removeClass('banners-a');
                     $('.banners').addClass('banners-h');
                     $('.banner-'+banner_value).removeClass('banners-h');
@@ -3780,15 +3877,30 @@
                     $('#bg-i').addClass('bck-img-area');
                     $('.bck-img-area').addClass('background-img-'+banner_value);
 
+                    // 프로그레스
+                    $('.banner-'+banner_value).append('<div class="progress-bar"></div>'); // 프로그레스 생성
+                    
                     banner_value++;
-                    if(banner_value == 11)
-                        banner_value = 1;
-                }
-                setTimeout(bannerAutoMove, 3000);
+                    if(banner_value == 11) banner_value = 1;
             }
-            
-            bannerAutoMove();
-            
+
+            let bannerAutoMoveInterval = bannerAutoMove();
+
+            // 배너 자동으로 3초마다 넘기기
+            bannerAutoMoveInterval = setInterval(bannerAutoMove, 3000);
+
+            //배너 호버 시 setInterval의 동작이 중단
+            $('.banners').hover(function() {
+                clearInterval(bannerAutoMoveInterval);
+                $('.progress-bar').remove();
+                banner_value--;
+            }, function() {
+                // unhover 시 function 실행
+                bannerAutoMoveInterval = bannerAutoMove();
+                // unhover 시 3초후 function
+                bannerAutoMoveInterval = setInterval(bannerAutoMove, 3000);
+            });
+
 
 
 
