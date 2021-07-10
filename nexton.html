@@ -1801,7 +1801,7 @@
                 height: 80px;
                 top: 0;
                 left: 0;
-                -webkit-animation: progress-bar 3s ease-out;
+                -webkit-animation: progress-bar 5s ease-out;
             }
 
             @-webkit-keyframes progress-bar {
@@ -3887,7 +3887,7 @@
             let bannerAutoMoveInterval = bannerAutoMove();
 
             // 배너 자동으로 3초마다 넘기기
-            bannerAutoMoveInterval = setInterval(bannerAutoMove, 3000);
+            bannerAutoMoveInterval = setInterval(bannerAutoMove, 5000);
 
             //배너 호버 시 setInterval의 동작이 중단
             $('.banners').hover(function() {
@@ -3898,7 +3898,7 @@
                 // unhover 시 function 실행
                 bannerAutoMoveInterval = bannerAutoMove();
                 // unhover 시 3초후 function
-                bannerAutoMoveInterval = setInterval(bannerAutoMove, 3000);
+                bannerAutoMoveInterval = setInterval(bannerAutoMove, 5000);
             });
 
 
