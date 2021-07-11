@@ -311,22 +311,22 @@
                 color: #fff;
             }
 
-            .banners-h {
+            .banners-unHover {
                 background-color: rgba( 255, 255, 255, 0.1);
                 transition: all .5s;
             }
 
-            .banners-a {
+            .banners-hover {
                 background-color: rgba( 255, 255, 255, 0.3);
                 transition: all .5s;
             }
 
-            .banners-h div {
+            .banners-unHover div {
                 color: rgb(219, 219, 219);
                 transition: all .5s;
             }
 
-            .banners-a div {
+            .banners-hover div {
                 color: #fff;
                 transition: all .5s;
             }
@@ -2167,7 +2167,7 @@
                         
                         <div class="banners banner-4" data-value="4">
                             <div class="bn-inf game-name">씨 오브 씨브즈</div>
-                            <div class="bn-inf banner-title">수상항 괴물체 목격</div>
+                            <div class="bn-inf banner-title">수상한 괴물체 목격</div>
                         </div>
                     
                     
@@ -3809,12 +3809,12 @@
 
 
             //배너 밑에 메뉴 클릭 이벤트
-            $('.banner-1').addClass('banners-a');
+            $('.banner-1').addClass('banners-hover');
             $('.banners').click(function(){
-                $('.banners').removeClass('banners-a');
-                $('.banners').addClass('banners-h');
-                $(this).removeClass('banners-h');
-                $(this).addClass('banners-a');
+                $('.banners').removeClass('banners-hover');
+                $('.banners').addClass('banners-unHover');
+                $(this).removeClass('banners-unHover');
+                $(this).addClass('banners-hover');
             });
 
         
@@ -3869,10 +3869,10 @@
                         $('.banner-move-r').addClass('banner-move-display');
                     }
                     //하단 배너 하이라이트
-                    $('.banners').removeClass('banners-a');
-                    $('.banners').addClass('banners-h');
-                    $('.banner-'+banner_value).removeClass('banners-h');
-                    $('.banner-'+banner_value).addClass('banners-a');
+                    $('.banners').removeClass('banners-hover');
+                    $('.banners').addClass('banners-unHover');
+                    $('.banner-'+banner_value).removeClass('banners-unHover');
+                    $('.banner-'+banner_value).addClass('banners-hover');
                     $('#bg-i').removeClass();
                     $('#bg-i').addClass('bck-img-area');
                     $('.bck-img-area').addClass('background-img-'+banner_value);
