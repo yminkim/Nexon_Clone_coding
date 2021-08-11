@@ -5,7 +5,8 @@
         <title>넥스트온</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
         <link rel="shortcut icon" href="./img/nexon.ico">
-
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+        
         <style>
             @font-face {
                 font-family: "nexon-nanum";
@@ -50,6 +51,8 @@
                 margin: 0 4px 10px 4px;
                 padding: 2px 5px;
                 line-height: 15px;
+                display: flex;
+                align-items: center;
             }
 
             .sign-in {
@@ -106,6 +109,7 @@
 
             .menu-text {
                 margin-left: 10px;
+                min-width: 34px;
             }
 
             .sign-in {
@@ -1201,6 +1205,14 @@
                 background-color: rgb(131, 131, 131);
             }
 
+            .footer-menu, .bottom-2-area, .bottom-3-area {
+                min-width: 676px;
+            }
+
+            .info-sns-area {
+                min-width: 1200px;
+            }
+
             .footer-menu div a {
                 text-decoration: none;
                 font-size: 12px;
@@ -1322,6 +1334,7 @@
 
             .header-game-menu label {
                 display: flex;
+                align-items: center;
                 padding: 20px;
                 cursor: pointer;
             }
@@ -1836,6 +1849,19 @@
                 color: transparent;
                 transition: all 0.3s;
             }
+
+            .pc-text {
+                min-width: 37.5px;
+            }
+
+            .sign-up {
+                min-width: 68px;
+            }            
+
+            .sign-in {
+                min-width: 86px;
+            }
+
            
         </style>
     </head>
@@ -3857,6 +3883,7 @@
 
             function bannerAutoMove() {
                 console.log(stop_val);
+                if(banner_value == 11) banner_value = 1;
                     // 배너 6~10 일 때 배너 페이지, 화살표 출력
                     if(banner_value >= 6) {
                         $('.banner-move-area').css("transform", "translateX(-1279px)");
@@ -3882,7 +3909,7 @@
                     $('.banner-'+banner_value).append('<div class="progress-bar"></div>'); // 프로그레스 생성
                     
                     banner_value++;
-                    if(banner_value == 11) banner_value = 1;
+                    
             }
 
             let bannerAutoMoveInterval = bannerAutoMove();
